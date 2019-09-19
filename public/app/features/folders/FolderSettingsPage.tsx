@@ -53,10 +53,10 @@ export class FolderSettingsPage extends PureComponent<Props, State> {
     evt.preventDefault();
 
     appEvents.emit('confirm-modal', {
-      title: 'Delete',
-      text: `Do you want to delete this folder and all its dashboards?`,
+      title: '删除',
+      text: `是否要删除此文件夹及其所有仪表板?`,
       icon: 'fa-trash',
-      yesText: 'Delete',
+      yesText: '删除',
       onConfirm: () => {
         this.props.deleteFolder(this.props.folder.uid);
       },
@@ -69,12 +69,12 @@ export class FolderSettingsPage extends PureComponent<Props, State> {
     return (
       <Page navModel={navModel}>
         <Page.Contents isLoading={this.state.isLoading}>
-          <h3 className="page-sub-heading">Folder Settings</h3>
+          <h3 className="page-sub-heading">文件夹设置</h3>
 
           <div className="section gf-form-group">
             <form name="folderSettingsForm" onSubmit={this.onSave}>
               <div className="gf-form">
-                <label className="gf-form-label width-7">Name</label>
+                <label className="gf-form-label width-7">名称</label>
                 <Input
                   type="text"
                   className="gf-form-input width-30"
@@ -84,10 +84,10 @@ export class FolderSettingsPage extends PureComponent<Props, State> {
               </div>
               <div className="gf-form-button-row">
                 <button type="submit" className="btn btn-primary" disabled={!folder.canSave || !folder.hasChanged}>
-                  Save
+                  保存
                 </button>
                 <button className="btn btn-danger" onClick={this.onDelete} disabled={!folder.canSave}>
-                  Delete
+                  删除
                 </button>
               </div>
             </form>

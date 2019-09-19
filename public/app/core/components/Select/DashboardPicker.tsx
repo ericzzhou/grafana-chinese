@@ -40,7 +40,7 @@ export class DashboardPicker extends PureComponent<Props, State> {
           return {
             id: item.id,
             value: item.id,
-            label: `${item.folderTitle ? item.folderTitle : 'General'}/${item.title}`,
+            label: `${item.folderTitle ? item.folderTitle : '常规'}/${item.title}`,
           };
         });
 
@@ -63,8 +63,8 @@ export class DashboardPicker extends PureComponent<Props, State> {
             defaultOptions={true}
             loadOptions={this.debouncedSearch}
             onChange={onSelected}
-            placeholder="Select dashboard"
-            noOptionsMessage={() => 'No dashboards found'}
+            placeholder="选择仪表板"
+            noOptionsMessage={() => '没有找到仪表板'}
             value={currentDashboardId}
           />
         </div>

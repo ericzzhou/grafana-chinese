@@ -182,13 +182,13 @@ export class DashboardPage extends PureComponent<Props, State> {
     try {
       this.props.dashboard.render();
     } catch (err) {
-      this.props.notifyApp(createErrorNotification(`Panel rendering error`, err));
+      this.props.notifyApp(createErrorNotification(`面板渲染错误`, err));
     }
   }
 
   handleFullscreenPanelNotFound(urlPanelId: string) {
     // Panel not found
-    this.props.notifyApp(createErrorNotification(`Panel with id ${urlPanelId} not found`));
+    this.props.notifyApp(createErrorNotification(`面板ID ${urlPanelId} 未找到`));
     // Clear url state
     this.props.updateLocation({
       query: {

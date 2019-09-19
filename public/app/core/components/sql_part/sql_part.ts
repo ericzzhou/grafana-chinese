@@ -44,7 +44,7 @@ export class SqlPart {
     this.part = part;
     this.def = def;
     if (!this.def) {
-      throw { message: 'Could not find sql part ' + part.type };
+      throw { message: '找不到sql部分 ' + part.type };
     }
 
     this.datatype = part.datatype;

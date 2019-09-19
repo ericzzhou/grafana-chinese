@@ -24,12 +24,12 @@ function ItemAvatar({ item }: { item: DashboardAcl }) {
 
 function ItemDescription({ item }: { item: DashboardAcl }) {
   if (item.userId) {
-    return <span className="filter-table__weak-italic">(User)</span>;
+    return <span className="filter-table__weak-italic">(用户)</span>;
   }
   if (item.teamId) {
-    return <span className="filter-table__weak-italic">(Team)</span>;
+    return <span className="filter-table__weak-italic">(团队)</span>;
   }
-  return <span className="filter-table__weak-italic">(Role)</span>;
+  return <span className="filter-table__weak-italic">(角色)</span>;
 }
 
 interface Props {
@@ -64,15 +64,15 @@ export default class PermissionsListItem extends PureComponent<Props> {
         <td>
           {item.inherited && folderInfo && (
             <em className="muted no-wrap">
-              Inherited from folder{' '}
+              继承自文件夹{' '}
               <a className="text-link" href={`${folderInfo.url}/permissions`}>
                 {folderInfo.title}
               </a>{' '}
             </em>
           )}
-          {inheritedFromRoot && <em className="muted no-wrap">Default Permission</em>}
+          {inheritedFromRoot && <em className="muted no-wrap">默认权限</em>}
         </td>
-        <td className="query-keyword">Can</td>
+        <td className="query-keyword">能够</td>
         <td>
           <div className="gf-form">
             <Select

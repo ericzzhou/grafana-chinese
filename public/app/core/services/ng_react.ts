@@ -24,7 +24,7 @@ function getReactComponent(name: string, $injector: auto.IInjectorService) {
 
   // a React component name must be specified
   if (!name) {
-    throw new Error('ReactComponent name attribute must be specified');
+    throw new Error('必须指定ReactComponent名称属性');
   }
 
   // ensure the specified React component is accessible, and fail fast if it's not
@@ -43,7 +43,7 @@ function getReactComponent(name: string, $injector: auto.IInjectorService) {
   }
 
   if (!reactComponent) {
-    throw Error('Cannot find react component ' + name);
+    throw Error('找不到 react 组件 ' + name);
   }
 
   return reactComponent;

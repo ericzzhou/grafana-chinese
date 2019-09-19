@@ -91,15 +91,15 @@ export class AlertTab extends PureComponent<Props> {
   deleteAlert = (): EditorToolbarView => {
     const { panel } = this.props;
     return {
-      title: 'Delete',
+      title: '删除',
       btnType: 'danger',
       onClick: () => {
         appEvents.emit('confirm-modal', {
-          title: 'Delete Alert',
-          text: 'Are you sure you want to delete this alert rule?',
-          text2: 'You need to save dashboard for the delete to take effect',
+          title: '删除警报',
+          text: '您确定要删除此警报规则吗？?',
+          text2: '您需要保存仪表板才能使删除生效',
           icon: 'fa-trash',
-          yesText: 'Delete',
+          yesText: '删除',
           onConfirm: () => {
             delete panel.alert;
             panel.thresholds = [];
@@ -118,7 +118,7 @@ export class AlertTab extends PureComponent<Props> {
   };
 
   testRule = (): EditorToolbarView => ({
-    title: 'Test Rule',
+    title: '测试规则',
     render: () => this.renderTestRuleResult(),
   });
 
@@ -135,10 +135,7 @@ export class AlertTab extends PureComponent<Props> {
     if (!alert && hasTransformations) {
       return (
         <EditorTabBody heading="Alert">
-          <AlertBox
-            severity={AppNotificationSeverity.Warning}
-            title="Transformations are not supported in alert queries"
-          />
+          <AlertBox severity={AppNotificationSeverity.Warning} title="警报查询不支持转换" />
         </EditorTabBody>
       );
     }
@@ -146,20 +143,17 @@ export class AlertTab extends PureComponent<Props> {
     const toolbarItems = alert ? [this.stateHistory(), this.testRule(), this.deleteAlert()] : [];
 
     const model = {
-      title: 'Panel has no alert rule defined',
+      title: 'Panel没有定义警报规则',
       buttonIcon: 'gicon gicon-alert',
       onClick: this.onAddAlert,
-      buttonTitle: 'Create Alert',
+      buttonTitle: '创建警报',
     };
 
     return (
       <EditorTabBody heading="Alert" toolbarItems={toolbarItems}>
         <>
           {alert && hasTransformations && (
-            <AlertBox
-              severity={AppNotificationSeverity.Error}
-              title="Transformations are not supported in alert queries"
-            />
+            <AlertBox severity={AppNotificationSeverity.Error} title="警报查询不支持转换" />
           )}
 
           <div ref={element => (this.element = element)} />

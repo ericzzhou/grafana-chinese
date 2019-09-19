@@ -55,7 +55,7 @@ const loadCSS = (url: string) => {
     }
 
     link.onerror = (evt: any) => {
-      _callback(evt.error || new Error('Error loading CSS file.'));
+      _callback(evt.error || new Error('加载CSS文件时出错.'));
     };
 
     head.appendChild(link);

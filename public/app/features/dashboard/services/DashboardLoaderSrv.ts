@@ -55,7 +55,7 @@ export class DashboardLoaderSrv {
         .then((result: any) => {
           if (result.meta.isFolder) {
             this.$rootScope.appEvent('alert-error', ['Dashboard not found']);
-            throw new Error('Dashboard not found');
+            throw new Error('未找到仪表板');
           }
           return result;
         })
@@ -94,10 +94,7 @@ export class DashboardLoaderSrv {
         },
         (err: any) => {
           console.log('Script dashboard error ' + err);
-          this.$rootScope.appEvent('alert-error', [
-            'Script Error',
-            'Please make sure it exists and returns a valid dashboard',
-          ]);
+          this.$rootScope.appEvent('alert-error', ['Script Error', '请确保它存在并返回有效的仪表板']);
           return this._dashboardLoadFailed('Scripted dashboard');
         }
       );

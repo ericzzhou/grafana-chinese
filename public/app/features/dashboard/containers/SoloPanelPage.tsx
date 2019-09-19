@@ -80,11 +80,11 @@ export class SoloPanelPage extends Component<Props, State> {
     const { notFound, panel } = this.state;
 
     if (notFound) {
-      return <div className="alert alert-error">Panel with id {urlPanelId} not found</div>;
+      return <div className="alert alert-error">面板id {urlPanelId}没找到</div>;
     }
 
     if (!panel) {
-      return <div>Loading & initializing dashboard</div>;
+      return <div>加载&初始化仪表板</div>;
     }
 
     return (

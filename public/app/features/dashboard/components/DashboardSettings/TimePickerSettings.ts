@@ -24,7 +24,7 @@ export class TimePickerCtrl {
 
 const template = `
 <div class="editor-row">
-	<h5 class="section-heading">Time Options</h5>
+	<h5 class="section-heading">时间选项</h5>
 
   <div class="gf-form-group">
 		<div class="gf-form">
@@ -45,7 +45,7 @@ const template = `
 			<input type="text" class="gf-form-input max-width-25" ng-model="ctrl.panel.nowDelay"
 			    placeholder="0m"
 			    valid-time-span
-			    bs-tooltip="'Enter 1m to ignore the last minute (because it can contain incomplete metrics)'"
+			    bs-tooltip="'输入1m忽略最后一分钟（因为它可能包含不完整的度量）'"
  				  data-placement="right">
 		</div>
 

@@ -48,7 +48,7 @@ export class TestRuleResult extends PureComponent<Props, State> {
   };
 
   onClipboardSuccess = () => {
-    appEvents.emit('alert-success', ['Content copied to clipboard']);
+    appEvents.emit('alert-success', ['内容复制到剪贴板']);
   };
 
   onToggleExpand = () => {
@@ -103,7 +103,7 @@ export class TestRuleResult extends PureComponent<Props, State> {
             text={this.getTextForClipboard}
             onSuccess={this.onClipboardSuccess}
           >
-            <i className="fa fa-clipboard" /> Copy to Clipboard
+            <i className="fa fa-clipboard" /> 复制到剪贴板
           </CopyToClipboard>
         </div>
 

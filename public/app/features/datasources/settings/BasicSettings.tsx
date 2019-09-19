@@ -13,14 +13,7 @@ const BasicSettings: FC<Props> = ({ dataSourceName, isDefault, onDefaultChange, 
     <div className="gf-form-group">
       <div className="gf-form-inline">
         <div className="gf-form max-width-30" style={{ marginRight: '3px' }}>
-          <FormLabel
-            tooltip={
-              'The name is used when you select the data source in panels. The Default data source is ' +
-              'preselected in new panels.'
-            }
-          >
-            Name
-          </FormLabel>
+          <FormLabel tooltip={'在面板中选择数据源时使用该名称 ' + '在新面板中预选默认数据源.'}>Name</FormLabel>
           <Input
             className="gf-form-input max-width-23"
             type="text"

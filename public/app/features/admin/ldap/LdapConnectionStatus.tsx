@@ -9,14 +9,14 @@ interface Props {
 export const LdapConnectionStatus: FC<Props> = ({ ldapConnectionInfo }) => {
   return (
     <>
-      <h3 className="page-heading">LDAP Connection</h3>
+      <h3 className="page-heading">LDAP 链接</h3>
       <div className="gf-form-group">
         <div className="gf-form">
           <table className="filter-table form-inline">
             <thead>
               <tr>
                 <th>Host</th>
-                <th colSpan={2}>Port</th>
+                <th colSpan={2}>端口</th>
               </tr>
             </thead>
             <tbody>

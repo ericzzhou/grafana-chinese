@@ -19,7 +19,7 @@ const panelTemplate = `
           <i class="fa fa-spinner fa-spin"></i>
         </span>
 
-        <panel-header class="panel-title-container" panel-ctrl="ctrl" aria-label="Panel Title"></panel-header>
+        <panel-header class="panel-title-container" panel-ctrl="ctrl" aria-label="面板标题"></panel-header>
       </div>
 
       <div class="panel-content">

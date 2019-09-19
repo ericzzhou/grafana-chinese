@@ -1,41 +1,41 @@
 <page-header model="navModel"></page-header>
 
 <div class="page-container page-body">
-  <h3 class="page-sub-heading">Edit User</h3>
+  <h3 class="page-sub-heading">编辑用户</h3>
 
   <form name="userForm" class="gf-form-group">
     <div class="gf-form">
-      <span class="gf-form-label width-10">Name</span>
+      <span class="gf-form-label width-10">名字</span>
       <input type="text" required ng-model="user.name" class="gf-form-input max-width-25" />
     </div>
     <div class="gf-form">
-      <span class="gf-form-label width-10">Email</span>
+      <span class="gf-form-label width-10">电子邮箱</span>
       <input type="email" ng-model="user.email" class="gf-form-input max-width-25" />
     </div>
     <div class="gf-form">
-      <span class="gf-form-label width-10">Username</span>
+      <span class="gf-form-label width-10">用户名</span>
       <input type="text" ng-model="user.login" class="gf-form-input max-width-25" />
     </div>
 
     <div class="gf-form-button-row">
-      <button type="submit" class="btn btn-primary" ng-click="update()" ng-show="!createMode">Update</button>
+      <button type="submit" class="btn btn-primary" ng-click="update()" ng-show="!createMode">更新</button>
     </div>
   </form>
 
-  <h3 class="page-heading">Change password</h3>
+  <h3 class="page-heading">修改密码</h3>
 
   <form name="passwordForm" class="gf-form-group">
     <div class="gf-form">
-      <span class="gf-form-label width-10">New password</span>
+      <span class="gf-form-label width-10">新密码</span>
       <input type="password" required ng-minlength="4" ng-model="password" class="gf-form-input max-width-25" />
     </div>
 
     <div class="gf-form-button-row">
-      <button type="submit" class="btn btn-primary" ng-click="setPassword()">Update</button>
+      <button type="submit" class="btn btn-primary" ng-click="setPassword()">更新</button>
     </div>
   </form>
 
-  <h3 class="page-heading">Permissions</h3>
+  <h3 class="page-heading">权限</h3>
 
   <form name="passwordForm" class="gf-form-group">
     <div class="gf-form">
@@ -49,23 +49,23 @@
     </div>
   </form>
 
-  <h3 class="page-heading">Organizations</h3>
+  <h3 class="page-heading">组织</h3>
 
   <form name="addOrgForm" class="gf-form-group">
     <div class="gf-form-inline">
       <div class="gf-form">
-        <span class="gf-form-label">Add</span>
+        <span class="gf-form-label">添加</span>
         <input
           type="text"
           ng-model="newOrg.name"
           bs-typeahead="searchOrgs"
           required
           class="gf-form-input max-width-20"
-          placeholder="organization name"
+          placeholder="机构名称"
         />
       </div>
       <div class="gf-form">
-        <span class="gf-form-label">Role</span>
+        <span class="gf-form-label">角色</span>
         <span class="gf-form-select-wrapper">
           <select
             type="text"
@@ -76,7 +76,7 @@
         </span>
       </div>
       <div class="gf-form">
-        <button class="btn btn-primary gf-form-btn" ng-click="addOrgUser()">Add</button>
+        <button class="btn btn-primary gf-form-btn" ng-click="addOrgUser()">添加</button>
       </div>
     </div>
   </form>
@@ -85,13 +85,13 @@
     <table class="filter-table">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Role</th>
+          <th>名字</th>
+          <th>角色</th>
           <th></th>
         </tr>
       </thead>
       <tr ng-repeat="org in orgs">
-        <td>{{org.name}} <span class="label label-info" ng-show="org.orgId === user.orgId">Current</span></td>
+        <td>{{org.name}} <span class="label label-info" ng-show="org.orgId === user.orgId">当前</span></td>
         <td>
           <div class="gf-form">
             <span class="gf-form-select-wrapper">
@@ -115,27 +115,27 @@
     </table>
   </div>
 
-  <h3 class="page-heading">Sessions</h3>
+  <h3 class="page-heading">会话</h3>
 
   <div class="gf-form-group">
     <div class="gf-form">
       <table class="filter-table form-inline">
         <thead>
           <tr>
-            <th>Last seen</th>
-            <th>Logged on</th>
-            <th>IP address</th>
-            <th>Browser &amp; OS</th>
+            <th>最后一次上线</th>
+            <th>登录</th>
+            <th>IP地址</th>
+            <th>浏览器 &amp; 操作系统</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="session in sessions">
-            <td ng-if="session.isActive">Now</td>
+            <td ng-if="session.isActive">现在</td>
             <td ng-if="!session.isActive">{{session.seenAt}}</td>
             <td>{{session.createdAt}}</td>
             <td>{{session.clientIp}}</td>
-            <td>{{session.browser}} on {{session.os}} {{session.osVersion}}</td>
+            <td>{{session.browser}} 在 {{session.os}} {{session.osVersion}}</td>
             <td>
               <button class="btn btn-danger btn-small" ng-click="revokeUserSession(session.id)">
                 <i class="fa fa-power-off"></i>
@@ -147,13 +147,13 @@
     </div>
     <div class="gf-form-button-row">
       <button ng-if="sessions.length" class="btn btn-danger" ng-click="revokeAllUserSessions()">
-        Logout user from all devices
+        从所有设备注销用户
       </button>
     </div>
   </div>
 
 
-  <h3 class="page-heading">User status</h3>
+  <h3 class="page-heading">用户状态</h3>
 
   <div class="gf-form-group">
     <div class="gf-form-button-row">
@@ -162,22 +162,22 @@
         class="btn btn-danger"
         ng-if="!user.isDisabled"
         ng-click="disableUser($event)"
-        bs-tooltip="user.isExternal ? 'External user cannot be enabled or disabled' : ''"
+        bs-tooltip="user.isExternal ? '无法启用或禁用外部用户' : ''"
         ng-class="{'disabled': user.isExternal}"
       >
-        Disable
+        禁用
       </button>
       <button
         type="submit"
         class="btn btn-primary"
         ng-if="user.isDisabled"
         ng-click="disableUser($event)"
-        bs-tooltip="user.isExternal ? 'External user cannot be enabled or disabled' : ''"
+        bs-tooltip="user.isExternal ? '无法启用或禁用外部用户' : ''"
         ng-class="{'disabled': user.isExternal}"
       >
-        Enable
+        启用
       </button>
-      <button type="submit" class="btn btn-danger" ng-click="deleteUser(user)" ng-show="!createMode">Delete User</button>
+      <button type="submit" class="btn btn-danger" ng-click="deleteUser(user)" ng-show="!createMode">删除用户</button>
     </div>
   </div>
 </div>

@@ -168,7 +168,7 @@ export class QueriesTab extends PureComponent<Props, State> {
         <div className="flex-grow-1" />
         {showAddButton && (
           <button className="btn navbar-button" onClick={this.onAddQueryClick}>
-            Add Query
+            添加查询
           </button>
         )}
         {isAddingMixed && this.renderMixedPicker()}
@@ -217,12 +217,12 @@ export class QueriesTab extends PureComponent<Props, State> {
     const { panel, dashboard } = this.props;
     const { currentDS, scrollTop, data } = this.state;
     const queryInspector: EditorToolbarView = {
-      title: 'Query Inspector',
+      title: '查询检查器',
       render: this.renderQueryInspector,
     };
 
     const dsHelp: EditorToolbarView = {
-      heading: 'Help',
+      heading: '帮助',
       icon: 'fa fa-question',
       render: this.renderHelp,
     };
@@ -231,7 +231,7 @@ export class QueriesTab extends PureComponent<Props, State> {
 
     return (
       <EditorTabBody
-        heading="Query"
+        heading="查询"
         renderToolbar={this.renderToolbar}
         toolbarItems={[queryInspector, dsHelp]}
         setScrollTop={this.setScrollTop}
@@ -269,7 +269,7 @@ export class QueriesTab extends PureComponent<Props, State> {
             <PanelOptionsGroup
               title={
                 <>
-                  Query results
+                  查询结果
                   <AlphaNotice
                     state={PluginState.alpha}
                     className={css`

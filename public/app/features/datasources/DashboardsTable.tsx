@@ -31,7 +31,7 @@ const DashboardsTable: FC<Props> = ({ dashboards, onImport, onRemove }) => {
               <td style={{ textAlign: 'right' }}>
                 {!dashboard.imported ? (
                   <button className="btn btn-secondary btn-small" onClick={() => onImport(dashboard, false)}>
-                    Import
+                    导入
                   </button>
                 ) : (
                   <button className="btn btn-secondary btn-small" onClick={() => onImport(dashboard, true)}>

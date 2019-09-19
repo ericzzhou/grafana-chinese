@@ -35,7 +35,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
 
     this.steps = [
       {
-        title: 'Install Grafana',
+        title: '安装 Grafana',
         icon: 'icon-gf icon-gf-check',
         href: 'http://docs.grafana.org/',
         target: '_blank',
@@ -44,7 +44,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
       },
       {
         title: 'Create your first data source',
-        cta: 'Add data source',
+        cta: '添加数据源',
         icon: 'gicon gicon-datasources',
         href: 'datasources/new?gettingstarted',
         check: () => {
@@ -61,7 +61,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
       },
       {
         title: 'Create your first dashboard',
-        cta: 'New dashboard',
+        cta: '创建新仪表盘',
         icon: 'gicon gicon-dashboard',
         href: 'dashboard/new?gettingstarted',
         check: () => {
@@ -74,7 +74,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
       },
       {
         title: 'Invite your team',
-        cta: 'Add Users',
+        cta: '添加用户',
         icon: 'gicon gicon-team',
         href: 'org/users?gettingstarted',
         check: () => {
@@ -87,7 +87,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
       },
       {
         title: 'Install apps & plugins',
-        cta: 'Explore plugin repository',
+        cta: '插件市场',
         icon: 'gicon gicon-plugins',
         href: 'https://grafana.com/plugins?utm_source=grafana_getting_started',
         check: () => {

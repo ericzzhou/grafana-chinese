@@ -12,20 +12,20 @@ export const UserInfo: FC<Props> = ({ user }) => {
         <table className="filter-table form-inline">
           <thead>
             <tr>
-              <th colSpan={2}>User information</th>
+              <th colSpan={2}>用户信息</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="width-16">Name</td>
+              <td className="width-16">名称</td>
               <td>{user.name}</td>
             </tr>
             <tr>
-              <td className="width-16">Username</td>
+              <td className="width-16">用户名</td>
               <td>{user.login}</td>
             </tr>
             <tr>
-              <td className="width-16">Email</td>
+              <td className="width-16">邮箱</td>
               <td>{user.email}</td>
             </tr>
           </tbody>

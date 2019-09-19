@@ -279,16 +279,16 @@ export class AlertTabCtrl {
           condition.query.params[0] = firstTarget.refId;
           foundTarget = firstTarget;
         } else {
-          this.error = 'Could not find any metric queries';
+          this.error = '无法找到任何指标查询';
         }
       }
 
       const datasourceName = foundTarget.datasource || this.panel.datasource;
       this.datasourceSrv.get(datasourceName).then(ds => {
         if (!ds.meta.alerting) {
-          this.error = 'The datasource does not support alerting queries';
+          this.error = '数据源不支持警报查询';
         } else if (ds.targetContainsTemplate && ds.targetContainsTemplate(foundTarget)) {
-          this.error = 'Template variables are not supported in alert queries';
+          this.error = '警报查询不支持模板变量';
         } else {
           this.error = '';
         }
@@ -362,11 +362,11 @@ export class AlertTabCtrl {
 
   delete() {
     appEvents.emit('confirm-modal', {
-      title: 'Delete Alert',
-      text: 'Are you sure you want to delete this alert rule?',
-      text2: 'You need to save dashboard for the delete to take effect',
+      title: '删除警报',
+      text: '您确定要删除此警报规则吗？?',
+      text2: '您需要保存仪表板才能使删除生效',
       icon: 'fa-trash',
-      yesText: 'Delete',
+      yesText: '删除',
       onConfirm: () => {
         delete this.panel.alert;
         this.alert = null;
@@ -412,10 +412,10 @@ export class AlertTabCtrl {
 
   clearHistory() {
     appEvents.emit('confirm-modal', {
-      title: 'Delete Alert History',
-      text: 'Are you sure you want to remove all history & annotations for this alert?',
+      title: '删除警报历史记录',
+      text: '您确定要删除此提醒的所有历史记录和注释吗？?',
       icon: 'fa-trash',
-      yesText: 'Yes',
+      yesText: '是',
       onConfirm: () => {
         this.backendSrv
           .post('/api/annotations/mass-delete', {

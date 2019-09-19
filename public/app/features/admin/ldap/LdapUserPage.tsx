@@ -101,9 +101,7 @@ export class LdapUserPage extends PureComponent<Props, State> {
     return (
       <Page navModel={navModel}>
         <Page.Contents isLoading={isLoading}>
-          <div className="grafana-info-box">
-            This user is synced via LDAP – all changes must be done in LDAP or mappings.
-          </div>
+          <div className="grafana-info-box">此用户通过LDAP同步 - 所有更改必须在LDAP或映射中完成。</div>
           {userError && userError.title && (
             <div className="gf-form-group">
               <AlertBox

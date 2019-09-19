@@ -40,7 +40,7 @@ export class ChangeTracker {
         return undefined;
       }
       if (this.hasChanges()) {
-        return 'There are unsaved changes to this dashboard';
+        return '此仪表板有未保存的更改';
       }
       return undefined;
     };

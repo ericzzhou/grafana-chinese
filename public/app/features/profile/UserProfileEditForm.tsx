@@ -55,14 +55,14 @@ export class UserProfileEditForm extends PureComponent<Props, State> {
 
     return (
       <>
-        <h3 className="page-sub-heading">Edit Profile</h3>
+        <h3 className="page-sub-heading">编辑个人资料</h3>
         <form name="userForm" className="gf-form-group">
           <div className="gf-form max-width-30">
-            <FormLabel className="width-8">Name</FormLabel>
+            <FormLabel className="width-8">名称</FormLabel>
             <Input className="gf-form-input max-width-22" type="text" onChange={this.onNameChange} value={name} />
           </div>
           <div className="gf-form max-width-30">
-            <FormLabel className="width-8">Email</FormLabel>
+            <FormLabel className="width-8">邮箱</FormLabel>
             <Input
               className="gf-form-input max-width-22"
               type="text"
@@ -77,7 +77,7 @@ export class UserProfileEditForm extends PureComponent<Props, State> {
             )}
           </div>
           <div className="gf-form max-width-30">
-            <FormLabel className="width-8">Username</FormLabel>
+            <FormLabel className="width-8">用户名</FormLabel>
             <Input
               className="gf-form-input max-width-22"
               type="text"
@@ -93,7 +93,7 @@ export class UserProfileEditForm extends PureComponent<Props, State> {
           </div>
           <div className="gf-form-button-row">
             <Button variant="primary" onClick={this.onSubmitProfileUpdate} disabled={isSavingUser}>
-              Save
+              保存
             </Button>
           </div>
         </form>

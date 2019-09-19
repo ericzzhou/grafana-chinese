@@ -69,8 +69,8 @@ export class TeamPicker extends Component<Props, State> {
           loadOptions={this.debouncedSearch}
           onChange={onSelected}
           className={className}
-          placeholder="Select a team"
-          noOptionsMessage={() => 'No teams found'}
+          placeholder="选择一个团队"
+          noOptionsMessage={() => '找不到团队'}
         />
       </div>
     );

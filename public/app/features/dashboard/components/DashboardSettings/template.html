@@ -6,34 +6,34 @@
 
 	<div class="dashboard-settings__aside-actions">
     <button class="btn btn-primary" ng-click="ctrl.saveDashboard()" ng-show="ctrl.canSave">
-			Save
+			保存
 		</button>
 		<button class="btn btn-inverse" ng-click="ctrl.openSaveAsModal()" ng-show="ctrl.canSaveAs">
-			Save As...
+			另存为...
 		</button>
 	</div>
 </aside>
 
 <div class="dashboard-settings__content" ng-if="ctrl.viewId === 'settings'">
 	<h3 class="dashboard-settings__header">
-		General
+		常规
 	</h3>
 
 	<div class="gf-form-group">
 		<div class="gf-form">
-			<label class="gf-form-label width-7">Name</label>
+			<label class="gf-form-label width-7">名称</label>
 			<input type="text" class="gf-form-input width-30" ng-model='ctrl.dashboard.title'></input>
 		</div>
 		<div class="gf-form">
-			<label class="gf-form-label width-7">Description</label>
+			<label class="gf-form-label width-7">描述</label>
 			<input type="text" class="gf-form-input width-30" ng-model='ctrl.dashboard.description'></input>
 		</div>
 		<div class="gf-form">
 			<label class="gf-form-label width-7">
 				Tags
-				<info-popover mode="right-normal">Press enter to add a tag</info-popover>
+				<info-popover mode="right-normal">按回车键添加标记</info-popover>
 			</label>
-			<bootstrap-tagsinput ng-model="ctrl.dashboard.tags" tagclass="label label-tag" placeholder="add tags">
+			<bootstrap-tagsinput ng-model="ctrl.dashboard.tags" tagclass="label label-tag" placeholder="添加标记">
 			</bootstrap-tagsinput>
 		</div>
 		<folder-picker initial-title="ctrl.dashboard.meta.folderTitle"
@@ -44,18 +44,18 @@
 									 label-class="width-7"
 									 dashboard-id="ctrl.dashboard.id">
 		</folder-picker>
-		<gf-form-switch class="gf-form" label="Editable" tooltip="Uncheck, then save and reload to disable all dashboard editing" checked="ctrl.dashboard.editable" label-class="width-7">
+		<gf-form-switch class="gf-form" label="Editable" tooltip="取消选中，然后保存并重新加载以禁用所有仪表板编辑" checked="ctrl.dashboard.editable" label-class="width-7">
 		</gf-form-switch>
 	</div>
 
 	<gf-time-picker-settings dashboard="ctrl.dashboard"></gf-time-picker-settings>
 
-	<h5 class="section-heading">Panel Options</h5>
+	<h5 class="section-heading">面板选项</h5>
 	<div class="gf-form">
 		<label class="gf-form-label width-11">
-			Graph Tooltip
+			图形工具提示
 			<info-popover mode="right-normal">
-				Cycle between options using Shortcut: CTRL+O or CMD+O
+				使用快捷方式在选项之间切换: CTRL+O or CMD+O
 			</info-popover>
 		</label>
 		<div class="gf-form-select-wrapper">
@@ -64,7 +64,7 @@
 	</div>
 	<div class="gf-form-button-row">
 	  <button class="btn btn-danger" ng-click="ctrl.deleteDashboard()" ng-show="ctrl.canDelete">
-		  Delete Dashboard
+		删除仪表板
 	  </button>
   </div>
 </div>
@@ -84,10 +84,9 @@
 </div>
 
 <div class="dashboard-settings__content" ng-if="ctrl.viewId === 'dashboard_json'" >
-	<h3 class="dashboard-settings__header">JSON Model</h3>
+	<h3 class="dashboard-settings__header">JSON 模型</h3>
   <div class="dashboard-settings__subheader">
-    The JSON Model below is data structure that defines the dashboard. Including settings, panel settings & layout,
-    queries etc.
+下面的json模型是定义仪表板的数据结构。包括设置、面板设置和布局，查询等。
   </div>
 
 	<div class="gf-form">
@@ -96,7 +95,7 @@
 
   <div class="gf-form-button-row">
     <button class="btn btn-primary" ng-click="ctrl.saveDashboardJson()" ng-show="ctrl.canSave">
-      Save Changes
+	保存更改
     </button>
   </div>
 </div>
@@ -108,23 +107,23 @@
     folder="ctrl.getFolder()"
   />
   <div ng-if="ctrl.hasUnsavedFolderChange">
-    <h5>You have changed folder, please save to view permissions.</h5>
+    <h5>您已更改文件夹，请保存以查看权限.</h5>
   </div>
 </div>
 
 <div class="dashboard-settings__content" ng-if="ctrl.viewId === '404'">
-  <h3 class="dashboard-settings__header">Settings view not found</h3>
+  <h3 class="dashboard-settings__header">找不到设置视图</h3>
 
   <div>
-    <h5>The settings page could not be found or you do not have permission to access it</h5>
+    <h5>找不到“设置”页，或者您没有访问该页的权限</h5>
   </div>
 </div>
 
 <div class="dashboard-settings__content" ng-if="ctrl.viewId === 'make_editable'">
-  <h3 class="dashboard-settings__header">Make Editable</h3>
+  <h3 class="dashboard-settings__header">设置为可编辑</h3>
 
   <button class="btn btn-primary" ng-click="ctrl.makeEditable()">
-    Make Editable
+	设置为可编辑
   </button>
 </div>
 

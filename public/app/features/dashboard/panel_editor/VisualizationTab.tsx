@@ -83,7 +83,7 @@ export class VisualizationTab extends PureComponent<Props, State> {
       );
     }
 
-    return <p>Visualization has no options</p>;
+    return <p>没有可视化选项</p>;
   }
 
   componentDidMount() {
@@ -240,14 +240,14 @@ export class VisualizationTab extends PureComponent<Props, State> {
     const { meta } = plugin;
 
     const pluginHelp: EditorToolbarView = {
-      heading: 'Help',
+      heading: '帮助',
       icon: 'fa fa-question',
       render: this.renderHelp,
     };
 
     return (
       <EditorTabBody
-        heading="Visualization"
+        heading="可视化"
         renderToolbar={this.renderToolbar}
         toolbarItems={[pluginHelp]}
         scrollTop={scrollTop}

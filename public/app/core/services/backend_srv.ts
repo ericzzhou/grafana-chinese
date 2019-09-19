@@ -54,7 +54,7 @@ export class BackendSrv implements BackendService {
       return;
     }
 
-    let data = err.data || { message: 'Unexpected error' };
+    let data = err.data || { message: '意外的错误' };
     if (_.isString(data)) {
       data = { message: data };
     }

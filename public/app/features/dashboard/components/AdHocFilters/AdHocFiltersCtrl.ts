@@ -21,7 +21,7 @@ export class AdHocFiltersCtrl {
   ) {
     this.removeTagFilterSegment = uiSegmentSrv.newSegment({
       fake: true,
-      value: '-- remove filter --',
+      value: '-- 删除筛选器 --',
     });
     this.buildSegmentModel();
     this.dashboard.events.on('template-variable-value-updated', this.buildSegmentModel.bind(this), $scope);

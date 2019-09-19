@@ -21,7 +21,7 @@ export const reducerFactory = <State>(initialState: State): AddMapper<State> => 
 
   const addMapper = <Payload>(config: MapperConfig<State, Payload>): CreateReducer<State> => {
     if (allMappers[config.filter.type]) {
-      throw new Error(`There is already a mapper defined with the type ${config.filter.type}`);
+      throw new Error(`已经有一个使用该类型定义的映射器 ${config.filter.type}`);
     }
 
     allMappers[config.filter.type] = config.mapper;

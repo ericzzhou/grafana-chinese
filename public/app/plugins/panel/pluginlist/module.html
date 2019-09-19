@@ -12,20 +12,20 @@
         </span>
         <span ng-if="ctrl.isAdmin">
           <span class="pluginlist-message pluginlist-message--update" ng-show="plugin.hasUpdate" ng-click="ctrl.updateAvailable(plugin, $event)" bs-tooltip="'New version: ' + plugin.latestVersion">
-            Update available!
+            更新可用!
           </span>
           <span class="pluginlist-message pluginlist-message--enable" ng-show="!plugin.enabled && !plugin.hasUpdate">
-            Enable now
+            立即启用
           </span>
           <span class="pluginlist-message pluginlist-message--no-update" ng-show="plugin.enabled && !plugin.hasUpdate">
-            Up to date
+            最新
           </span>
         </span>
       </a>
     </div>
     <div class="pluginlist-item" ng-show="category.list.length === 0">
       <a class="pluginlist-link pluginlist-link-{{plugin.state}}" href="https://grafana.com/plugins">
-        <span class="pluginlist-none-installed">None installed. <span class="pluginlist-emphasis">Browse Grafana.com</span></span>
+        <span class="pluginlist-none-installed">没有数据. <span class="pluginlist-emphasis">浏览 Grafana.com</span></span>
       </a>
     </div>
   </div>

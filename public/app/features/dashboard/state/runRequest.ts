@@ -91,7 +91,7 @@ export function runRequest(datasource: DataSourceApi, request: DataQueryRequest)
     // Transform response packets into PanelData with merged results
     map((packet: DataQueryResponse) => {
       if (!isArray(packet.data)) {
-        throw new Error(`Expected response data to be array, got ${typeof packet.data}.`);
+        throw new Error(`预期响应数据为数组，得到 ${typeof packet.data}.`);
       }
 
       request.endTime = Date.now();
@@ -153,7 +153,7 @@ export function processQueryError(err: any): DataQueryError {
     } else if (error.data && error.data.error) {
       message = error.data.error;
     } else if (error.status) {
-      message = `Query error: ${error.status} ${error.statusText}`;
+      message = `查询错误: ${error.status} ${error.statusText}`;
     }
     error.message = message;
   }

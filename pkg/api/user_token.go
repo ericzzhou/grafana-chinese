@@ -26,18 +26,18 @@ func (server *HTTPServer) logoutUserFromAllDevicesInternal(ctx context.Context, 
 
 	if err := bus.Dispatch(&userQuery); err != nil {
 		if err == models.ErrUserNotFound {
-			return Error(404, "User not found", err)
+			return Error(404, "找不到用户", err)
 		}
-		return Error(500, "Could not read user from database", err)
+		return Error(500, "无法从数据库中读取用户", err)
 	}
 
 	err := server.AuthTokenService.RevokeAllUserTokens(ctx, userID)
 	if err != nil {
-		return Error(500, "Failed to logout user", err)
+		return Error(500, "无法注销用户", err)
 	}
 
 	return JSON(200, util.DynMap{
-		"message": "User logged out",
+		"message": "用户退出了",
 	})
 }
 
@@ -46,14 +46,14 @@ func (server *HTTPServer) getUserAuthTokensInternal(c *models.ReqContext, userID
 
 	if err := bus.Dispatch(&userQuery); err != nil {
 		if err == models.ErrUserNotFound {
-			return Error(404, "User not found", err)
+			return Error(404, "找不到用户", err)
 		}
-		return Error(500, "Failed to get user", err)
+		return Error(500, "无法获得用户", err)
 	}
 
 	tokens, err := server.AuthTokenService.GetUserTokens(c.Req.Context(), userID)
 	if err != nil {
-		return Error(500, "Failed to get user auth tokens", err)
+		return Error(500, "无法获得用户身份验证令牌", err)
 	}
 
 	result := []*dtos.UserToken{}
@@ -113,32 +113,32 @@ func (server *HTTPServer) revokeUserAuthTokenInternal(c *models.ReqContext, user
 
 	if err := bus.Dispatch(&userQuery); err != nil {
 		if err == models.ErrUserNotFound {
-			return Error(404, "User not found", err)
+			return Error(404, "找不到用户", err)
 		}
-		return Error(500, "Failed to get user", err)
+		return Error(500, "无法获得用户", err)
 	}
 
 	token, err := server.AuthTokenService.GetUserToken(c.Req.Context(), userID, cmd.AuthTokenId)
 	if err != nil {
 		if err == models.ErrUserTokenNotFound {
-			return Error(404, "User auth token not found", err)
+			return Error(404, "未找到用户身份验证令牌", err)
 		}
-		return Error(500, "Failed to get user auth token", err)
+		return Error(500, "无法获得用户身份验证令牌", err)
 	}
 
 	if c.UserToken != nil && c.UserToken.Id == token.Id {
-		return Error(400, "Cannot revoke active user auth token", nil)
+		return Error(400, "无法撤消活动用户身份验证令牌", nil)
 	}
 
 	err = server.AuthTokenService.RevokeToken(c.Req.Context(), token)
 	if err != nil {
 		if err == models.ErrUserTokenNotFound {
-			return Error(404, "User auth token not found", err)
+			return Error(404, "未找到用户身份验证令牌", err)
 		}
-		return Error(500, "Failed to revoke user auth token", err)
+		return Error(500, "无法撤消用户身份验证令牌", err)
 	}
 
 	return JSON(200, util.DynMap{
-		"message": "User auth token revoked",
+		"message": "用户身份验证令牌被撤销",
 	})
 }

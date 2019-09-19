@@ -67,11 +67,11 @@ export class PluginHelp extends PureComponent<Props, State> {
     const { isError, isLoading, help } = this.state;
 
     if (isLoading) {
-      return <h2>Loading help...</h2>;
+      return <h2>加载帮助...</h2>;
     }
 
     if (isError) {
-      return <h3>'Error occurred when loading help'</h3>;
+      return <h3>'加载帮助时出错'</h3>;
     }
 
     if (type === 'panel_help' && help === '') {

@@ -17,9 +17,9 @@ export const LdapUserGroups: FC<Props> = ({ groups, showAttributeMapping }) => {
         <table className="filter-table form-inline">
           <thead>
             <tr>
-              <th>Organisation</th>
-              <th>Role</th>
-              {showAttributeMapping && <th colSpan={2}>LDAP Group</th>}
+              <th>组织</th>
+              <th>角色</th>
+              {showAttributeMapping && <th colSpan={2}>LDAP 分组</th>}
             </tr>
           </thead>
           <tbody>
@@ -34,7 +34,7 @@ export const LdapUserGroups: FC<Props> = ({ groups, showAttributeMapping }) => {
                       <td>
                         {!group.orgRole && (
                           <span className="text-warning pull-right">
-                            No match
+                            未匹配
                             <Tooltip placement="top" content="No matching groups found" theme={'info'}>
                               <div className="gf-form-help-icon gf-form-help-icon--right-normal">
                                 <i className="fa fa-info-circle" />

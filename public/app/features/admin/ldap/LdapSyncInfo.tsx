@@ -32,9 +32,9 @@ export class LdapSyncInfo extends PureComponent<Props, State> {
     return (
       <>
         <h3 className="page-heading">
-          LDAP Synchronisation
+          LDAP 同步
           <button className={`btn btn-secondary pull-right`} onClick={this.handleSyncClick} hidden={true}>
-            <span className="btn-title">Bulk-sync now</span>
+            <span className="btn-title">立即批量同步</span>
             {isSyncing && <i className="fa fa-spinner fa-fw fa-spin run-icon" />}
           </button>
         </h3>
@@ -43,23 +43,23 @@ export class LdapSyncInfo extends PureComponent<Props, State> {
             <table className="filter-table form-inline">
               <tbody>
                 <tr>
-                  <td>Active synchronisation</td>
+                  <td>激活同步</td>
                   <td colSpan={2}>{ldapSyncInfo.enabled ? 'Enabled' : 'Disabled'}</td>
                 </tr>
                 <tr>
-                  <td>Scheduled</td>
+                  <td>计划</td>
                   <td>{ldapSyncInfo.schedule}</td>
                 </tr>
                 <tr>
-                  <td>Next scheduled synchronisation</td>
+                  <td>下次计划同步</td>
                   <td>{nextSyncTime}</td>
                 </tr>
                 <tr>
-                  <td>Last synchronisation</td>
+                  <td>最后一次同步</td>
                   {prevSyncSuccessful && (
                     <>
                       <td>{prevSyncTime}</td>
-                      <td>Successful</td>
+                      <td>成功</td>
                     </>
                   )}
                 </tr>

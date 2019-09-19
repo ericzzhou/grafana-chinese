@@ -1,61 +1,61 @@
 <div class="gf-form-group">
   <div class="gf-form">
-    <h6>TLS Auth Details</h6>
-    <info-popover mode="header">TLS Certs are encrypted and stored in the Grafana database.</info-popover>
+    <h6>TLS Auth 详情</h6>
+    <info-popover mode="header">TLS 证书已加密并存储在Grafana数据库中.</info-popover>
   </div>
   <div ng-if="current.jsonData.tlsAuthWithCACert">
     <div class="gf-form-inline">
-      <div class="gf-form gf-form--v-stretch"><label class="gf-form-label width-7">CA Cert</label></div>
+      <div class="gf-form gf-form--v-stretch"><label class="gf-form-label width-7">CA证书</label></div>
       <div class="gf-form gf-form--grow" ng-if="!current.secureJsonFields.tlsCACert">
         <textarea
           rows="7"
           class="gf-form-input gf-form-textarea"
           ng-model="current.secureJsonData.tlsCACert"
-          placeholder="Begins with -----BEGIN CERTIFICATE-----"
+          placeholder="开始于 -----BEGIN CERTIFICATE-----"
         ></textarea>
       </div>
 
       <div class="gf-form" ng-if="current.secureJsonFields.tlsCACert">
         <input type="text" class="gf-form-input max-width-12" disabled="disabled" value="configured" />
-        <a class="btn btn-secondary gf-form-btn" href="#" ng-click="current.secureJsonFields.tlsCACert = false">reset</a>
+        <a class="btn btn-secondary gf-form-btn" href="#" ng-click="current.secureJsonFields.tlsCACert = false">重置</a>
       </div>
     </div>
   </div>
 
   <div ng-if="current.jsonData.tlsAuth">
     <div class="gf-form-inline">
-      <div class="gf-form gf-form--v-stretch"><label class="gf-form-label width-7">Client Cert</label></div>
+      <div class="gf-form gf-form--v-stretch"><label class="gf-form-label width-7">客户端证书</label></div>
       <div class="gf-form gf-form--grow" ng-if="!current.secureJsonFields.tlsClientCert">
         <textarea
           rows="7"
           class="gf-form-input gf-form-textarea"
           ng-model="current.secureJsonData.tlsClientCert"
-          placeholder="Begins with -----BEGIN CERTIFICATE-----"
+          placeholder="开始于 -----BEGIN CERTIFICATE-----"
           required
         ></textarea>
       </div>
       <div class="gf-form" ng-if="current.secureJsonFields.tlsClientCert">
         <input type="text" class="gf-form-input max-width-12" disabled="disabled" value="configured" />
         <a class="btn btn-secondary gf-form-btn" href="#" ng-click="current.secureJsonFields.tlsClientCert = false"
-          >reset</a
+          >重置</a
         >
       </div>
     </div>
 
     <div class="gf-form-inline">
-      <div class="gf-form gf-form--v-stretch"><label class="gf-form-label width-7">Client Key</label></div>
+      <div class="gf-form gf-form--v-stretch"><label class="gf-form-label width-7">客户端密钥</label></div>
       <div class="gf-form gf-form--grow" ng-if="!current.secureJsonFields.tlsClientKey">
         <textarea
           rows="7"
           class="gf-form-input gf-form-textarea"
           ng-model="current.secureJsonData.tlsClientKey"
-          placeholder="Begins with -----BEGIN RSA PRIVATE KEY-----"
+          placeholder="开始于 -----BEGIN RSA PRIVATE KEY-----"
           required
         ></textarea>
       </div>
       <div class="gf-form" ng-if="current.secureJsonFields.tlsClientKey">
-        <input type="text" class="gf-form-input max-width-12" disabled="disabled" value="configured" />
-        <a class="btn btn-secondary gf-form-btn" href="#" ng-click="current.secureJsonFields.tlsClientKey = false">reset</a>
+        <input type="text" class="gf-form-input max-width-12" disabled="disabled" value="配置" />
+        <a class="btn btn-secondary gf-form-btn" href="#" ng-click="current.secureJsonFields.tlsClientKey = false">重置</a>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@ export const ReactProfileWrapper = () => (
       return (
         <>
           {states.loadUser ? (
-            <LoadingPlaceholder text="Loading user profile..." />
+            <LoadingPlaceholder text="加载用户个人资料..." />
           ) : (
             <UserProfileEditForm
               updateProfile={api.updateUserProfile}

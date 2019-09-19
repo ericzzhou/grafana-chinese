@@ -115,9 +115,9 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
 
   onDelete = () => {
     appEvents.emit('confirm-modal', {
-      title: 'Delete',
-      text: 'Are you sure you want to delete this data source?',
-      yesText: 'Delete',
+      title: '删除',
+      text: '您确定要删除此数据源吗？?',
+      yesText: '删除',
       icon: 'fa-trash',
       onConfirm: () => {
         this.confirmDelete();
@@ -140,8 +140,7 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
   renderIsReadOnlyMessage() {
     return (
       <div className="grafana-info-box span8">
-        This datasource was added by config and cannot be modified using the UI. Please contact your server admin to
-        update this datasource.
+        此数据源是由config添加的，无法使用UI进行修改。 请联系您的服务器管理员以更新此数据源.
       </div>
     );
   }
@@ -199,7 +198,7 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
 
     const node = {
       text: msg,
-      subTitle: 'Data Source Error',
+      subTitle: '数据源错误',
       icon: 'fa fa-fw fa-warning',
     };
     const nav = {
@@ -214,11 +213,11 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
             <div className="gf-form-button-row">
               {showDelete && (
                 <button type="submit" className="btn btn-danger" onClick={this.onDelete}>
-                  Delete
+                  删除
                 </button>
               )}
               <a className="btn btn-inverse" href="datasources">
-                Back
+                返回
               </a>
             </div>
           </div>
@@ -239,7 +238,7 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
       }
     }
 
-    return <div>Page Not Found: {page}</div>;
+    return <div>网页未找到: {page}</div>;
   }
 
   renderSettings() {
@@ -276,7 +275,7 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
 
         <div className="gf-form-group">
           {testingMessage && (
-            <div className={`alert-${testingStatus} alert`} aria-label="Datasource settings page Alert">
+            <div className={`alert-${testingStatus} alert`} aria-label="设置数据源页面警报">
               <div className="alert-icon">
                 {testingStatus === 'error' ? (
                   <i className="fa fa-exclamation-triangle" />
@@ -285,7 +284,7 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
                 )}
               </div>
               <div className="alert-body">
-                <div className="alert-title" aria-label="Datasource settings page Alert message">
+                <div className="alert-title" aria-label="数据源设置页面警报消息">
                   {testingMessage}
                 </div>
               </div>

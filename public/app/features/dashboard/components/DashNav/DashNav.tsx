@@ -142,7 +142,7 @@ export class DashNav extends PureComponent<Props> {
             </a>
           </div>
         </div>
-        {this.isSettings && <span className="navbar-settings-title">&nbsp;/ Settings</span>}
+        {this.isSettings && <span className="navbar-settings-title">&nbsp;/ 设置</span>}
         <div className="navbar__spacer" />
       </>
     );

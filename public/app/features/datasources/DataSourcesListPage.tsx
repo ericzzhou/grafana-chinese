@@ -39,13 +39,13 @@ export interface Props {
 }
 
 const emptyListModel = {
-  title: 'There are no data sources defined yet',
+  title: '尚未定义任何数据源',
   buttonIcon: 'gicon gicon-datasources',
   buttonLink: 'datasources/new',
-  buttonTitle: 'Add data source',
-  proTip: 'You can also define data sources through configuration files.',
+  buttonTitle: '添加数据源',
+  proTip: '您还可以通过配置文件定义数据源。',
   proTipLink: 'http://docs.grafana.org/administration/provisioning/#datasources?utm_source=grafana_ds_list',
-  proTipLinkTitle: 'Learn more',
+  proTipLinkTitle: '学到更多',
   proTipTarget: '_blank',
 };
 
@@ -72,7 +72,7 @@ export class DataSourcesListPage extends PureComponent<Props> {
 
     const linkButton = {
       href: 'datasources/new',
-      title: 'Add data source',
+      title: '添加数据源',
     };
 
     return (

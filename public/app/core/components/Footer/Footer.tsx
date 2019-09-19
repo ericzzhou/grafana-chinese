@@ -17,17 +17,17 @@ export const Footer: FC<Props> = React.memo(
           <ul>
             <li>
               <a href="http://docs.grafana.org" target="_blank" rel="noopener">
-                <i className="fa fa-file-code-o" /> Docs
+                <i className="fa fa-file-code-o" /> 文档
               </a>
             </li>
             <li>
               <a href="https://grafana.com/services/support" target="_blank" rel="noopener">
-                <i className="fa fa-support" /> Support Plans
+                <i className="fa fa-support" /> 支持计划
               </a>
             </li>
             <li>
               <a href="https://community.grafana.com/" target="_blank" rel="noopener">
-                <i className="fa fa-comments-o" /> Community
+                <i className="fa fa-comments-o" /> 社区
               </a>
             </li>
             <li>
@@ -42,7 +42,7 @@ export const Footer: FC<Props> = React.memo(
               <li>
                 <Tooltip placement="auto" content={newGrafanaVersion}>
                   <a href="https://grafana.com/get" target="_blank" rel="noopener">
-                    New version available!
+                    新版本可用！
                   </a>
                 </Tooltip>
               </li>

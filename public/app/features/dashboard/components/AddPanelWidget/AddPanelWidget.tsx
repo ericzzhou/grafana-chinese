@@ -160,7 +160,7 @@ export class AddPanelWidget extends React.Component<Props, State> {
         <div className="add-panel-widget">
           <div className="add-panel-widget__header grid-drag-handle">
             <i className="gicon gicon-add-panel" />
-            <span className="add-panel-widget__title">New Panel</span>
+            <span className="add-panel-widget__title">新面板</span>
             <button className="add-panel-widget__close" onClick={this.handleCloseAddPanel}>
               <i className="fa fa-close" />
             </button>
@@ -174,14 +174,14 @@ export class AddPanelWidget extends React.Component<Props, State> {
             </div>
             <div className="add-panel-widget__actions">
               <button className="btn btn-inverse add-panel-widget__action" onClick={this.onCreateNewRow}>
-                Convert to row
+                转换为行
               </button>
               {copiedPanelPlugins.length === 1 && (
                 <button
                   className="btn btn-inverse add-panel-widget__action"
                   onClick={() => this.onPasteCopiedPanel(copiedPanelPlugins[0])}
                 >
-                  Paste copied panel
+                  粘贴复制面板
                 </button>
               )}
             </div>
