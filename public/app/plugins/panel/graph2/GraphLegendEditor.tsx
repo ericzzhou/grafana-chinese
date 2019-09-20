@@ -44,23 +44,23 @@ export const GraphLegendEditor: React.FunctionComponent<GraphLegendEditorProps> 
 
   const labelWidth = 8;
   return (
-    <PanelOptionsGroup title="Legend">
+    <PanelOptionsGroup title="图例">
       <div className="section gf-form-group">
-        <h4>Options</h4>
+        <h4>选项</h4>
         <Switch
-          label="Show legend"
+          label="显示图例"
           labelClass={`width-${labelWidth}`}
           checked={options.isVisible}
           onChange={onOptionToggle('isVisible')}
         />
         <Switch
-          label="Display as table"
+          label="显示为表格"
           labelClass={`width-${labelWidth}`}
           checked={options.asTable}
           onChange={onOptionToggle('asTable')}
         />
         <Switch
-          label="To the right"
+          label="右对齐"
           labelClass={`width-${labelWidth}`}
           checked={options.placement === 'right'}
           onChange={onOptionToggle('placement')}
@@ -68,7 +68,7 @@ export const GraphLegendEditor: React.FunctionComponent<GraphLegendEditorProps> 
       </div>
 
       <div className="section gf-form-group">
-        <h4>Show</h4>
+        <h4>显示</h4>
         <div className="gf-form">
           <StatsPicker
             allowMultiple={true}
@@ -96,7 +96,7 @@ export const GraphLegendEditor: React.FunctionComponent<GraphLegendEditorProps> 
       </div>
 
       <div className="section gf-form-group">
-        <h4>Hidden series</h4>
+        <h4>隐藏系列</h4>
         {/* <Switch label="With only nulls" checked={!!options.hideEmpty} onChange={onOptionToggle('hideEmpty')} /> */}
         <Switch label="With only zeros" checked={!!options.hideZero} onChange={onOptionToggle('hideZero')} />
       </div>

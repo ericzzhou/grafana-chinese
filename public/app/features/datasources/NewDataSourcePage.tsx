@@ -154,7 +154,7 @@ class NewDataSourcePage extends PureComponent<Props> {
                 inputClassName="gf-form-input width-30"
                 value={searchQuery}
                 onChange={this.onSearchQueryChange}
-                placeholder="Filter by name or type"
+                placeholder="按名称或类型过滤"
               />
             </div>
             <div className="page-action-bar__spacer" />

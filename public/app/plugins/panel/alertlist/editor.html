@@ -1,18 +1,18 @@
 <div>
   <div class="section gf-form-group">
-    <h5 class="section-heading">Options</h5>
+    <h5 class="section-heading">选项</h5>
     <div class="gf-form">
-      <span class="gf-form-label width-8">Show</span>
+      <span class="gf-form-label width-8">显示</span>
       <div class="gf-form-select-wrapper max-width-15">
         <select class="gf-form-input" ng-model="ctrl.panel.show" ng-options="f.value as f.text for f in ctrl.showOptions" ng-change="ctrl.onRefresh()"></select>
       </div>
     </div>
     <div class="gf-form">
-      <span class="gf-form-label width-8">Max items</span>
+      <span class="gf-form-label width-8">最大项目数</span>
       <input type="text" class="gf-form-input max-width-15" ng-model="ctrl.panel.limit" ng-change="ctrl.onRefresh()" />
     </div>
     <div class="gf-form" ng-show="ctrl.panel.show === 'current'">
-      <span class="gf-form-label width-8">Sort order</span>
+      <span class="gf-form-label width-8">排序</span>
       <div class="gf-form-select-wrapper max-width-15">
         <select class="gf-form-input" ng-model="ctrl.panel.sortOrder" ng-options="f.value as f.text for f in ctrl.sortOrderOptions" ng-change="ctrl.onRefresh()"></select>
       </div>
@@ -20,13 +20,13 @@
     <gf-form-switch class="gf-form" label="Alerts from this dashboard" label-class="width-18" checked="ctrl.panel.onlyAlertsOnDashboard" on-change="ctrl.updateStateFilter()"></gf-form-switch>
   </div>
   <div class="section gf-form-group" ng-show="ctrl.panel.show === 'current'">
-    <h5 class="section-heading">Filter</h5>
+    <h5 class="section-heading">过滤器</h5>
     <div class="gf-form">
-      <span class="gf-form-label width-8">Alert name</span>
+      <span class="gf-form-label width-8">提醒名称</span>
       <input type="text" class="gf-form-input max-width-15" ng-model="ctrl.panel.nameFilter" placeholder="Alert name query" ng-change="ctrl.onRefresh()" />
     </div>
     <div class="gf-form">
-      <span class="gf-form-label width-8">Dashboard title</span>
+      <span class="gf-form-label width-8">仪表盘标题</span>
       <input type="text" class="gf-form-input" placeholder="Dashboard title query" ng-model="ctrl.panel.dashboardFilter" ng-change="ctrl.onRefresh()" ng-model-onblur>
     </div>
     <div class="gf-form">
@@ -38,18 +38,18 @@
       </folder-picker>
     </div>
     <div class="gf-form">
-        <span class="gf-form-label width-8">Dashboard tags</span>
-        <bootstrap-tagsinput ng-model="ctrl.panel.dashboardTags" tagclass="label label-tag" placeholder="add tags" on-tags-updated="ctrl.refresh()">
+        <span class="gf-form-label width-8">仪表盘标签</span>
+        <bootstrap-tagsinput ng-model="ctrl.panel.dashboardTags" tagclass="label label-tag" placeholder="添加标签" on-tags-updated="ctrl.refresh()">
         </bootstrap-tagsinput>
     </div>
   </div>
   <div class="section gf-form-group" ng-show="ctrl.panel.show === 'current'">
-    <h5 class="section-heading">State filter</h5>
+    <h5 class="section-heading">状态过滤器</h5>
     <gf-form-switch class="gf-form" label="Ok" label-class="width-10" checked="ctrl.stateFilter['ok']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
-    <gf-form-switch class="gf-form" label="Paused" label-class="width-10" checked="ctrl.stateFilter['paused']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
-    <gf-form-switch class="gf-form" label="No data" label-class="width-10" checked="ctrl.stateFilter['no_data']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
-    <gf-form-switch class="gf-form" label="Execution error" label-class="width-10" checked="ctrl.stateFilter['execution_error']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
-    <gf-form-switch class="gf-form" label="Alerting" label-class="width-10" checked="ctrl.stateFilter['alerting']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
-    <gf-form-switch class="gf-form" label="Pending" label-class="width-10" checked="ctrl.stateFilter['pending']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
+    <gf-form-switch class="gf-form" label="已暂停" label-class="width-10" checked="ctrl.stateFilter['paused']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
+    <gf-form-switch class="gf-form" label="没数据" label-class="width-10" checked="ctrl.stateFilter['no_data']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
+    <gf-form-switch class="gf-form" label="执行错误" label-class="width-10" checked="ctrl.stateFilter['execution_error']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
+    <gf-form-switch class="gf-form" label="警报" label-class="width-10" checked="ctrl.stateFilter['alerting']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
+    <gf-form-switch class="gf-form" label="未决定的" label-class="width-10" checked="ctrl.stateFilter['pending']" on-change="ctrl.updateStateFilter()"></gf-form-switch>
   </div>
 </div>

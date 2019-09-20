@@ -43,7 +43,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
         check: () => Promise.resolve(true),
       },
       {
-        title: 'Create your first data source',
+        title: '创建您的第一个数据源',
         cta: '添加数据源',
         icon: 'gicon gicon-datasources',
         href: 'datasources/new?gettingstarted',
@@ -60,7 +60,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
         },
       },
       {
-        title: 'Create your first dashboard',
+        title: '创建您的第一个仪表板',
         cta: '创建新仪表盘',
         icon: 'gicon gicon-dashboard',
         href: 'dashboard/new?gettingstarted',
@@ -73,7 +73,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
         },
       },
       {
-        title: 'Invite your team',
+        title: '邀请你的团队',
         cta: '添加用户',
         icon: 'gicon gicon-team',
         href: 'org/users?gettingstarted',
@@ -86,7 +86,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
         },
       },
       {
-        title: 'Install apps & plugins',
+        title: '安装应用&插件',
         cta: '插件市场',
         icon: 'gicon gicon-plugins',
         href: 'https://grafana.com/plugins?utm_source=grafana_getting_started',

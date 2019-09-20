@@ -85,7 +85,7 @@ Panels are the building blocks of a dashboard. It consists of datasource queries
 "panels": [
   {
     "type": "text",
-    "title": "Panel Title",
+    "title": "面板标题",
     "gridPos": {
       "x": 0,
       "y": 0,

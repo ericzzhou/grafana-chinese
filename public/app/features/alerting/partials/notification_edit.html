@@ -20,31 +20,31 @@
       </div>
       <gf-form-switch
           class="gf-form"
-          label="Default (send on all alerts)"
+          label="默认（发送所有警报）"
           label-class="width-14"
           checked="ctrl.model.isDefault"
-          tooltip="Use this notification for all alerts">
+          tooltip="将此通知用于所有警报">
       </gf-form-switch>
       <gf-form-switch
           class="gf-form"
-          label="Include image"
+          label="包括图像"
           label-class="width-14"
           checked="ctrl.model.settings.uploadImage"
-          tooltip="Captures an image and include it in the notification">
+          tooltip="捕获图像并将其包含在通知中">
       </gf-form-switch>
       <gf-form-switch
           class="gf-form"
-          label="Disable Resolve Message"
+          label="禁用解析消息"
           label-class="width-14"
           checked="ctrl.model.disableResolveMessage"
           tooltip="Disable the resolve message [OK] that is sent when alerting state returns to false">
       </gf-form-switch>
       <gf-form-switch
           class="gf-form"
-          label="Send reminders"
+          label="发送提醒"
           label-class="width-14"
           checked="ctrl.model.sendReminder"
-          tooltip="Send additional notifications for triggered alerts">
+          tooltip="发送已触发警报的其他通知">
       </gf-form-switch>
       <div class="gf-form-inline">
         <div class="gf-form" ng-if="ctrl.model.sendReminder">

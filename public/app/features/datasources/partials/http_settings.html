@@ -53,7 +53,7 @@
 		<div class="gf-form-inline" ng-if="current.access=='proxy'">
 			<div class="gf-form">
 				<span class="gf-form-label width-10">Cookies 白名单</span>
-				<bootstrap-tagsinput ng-model="current.jsonData.keepCookies" width-class="width-20 gf-form-input--has-help-icon" tagclass="label label-tag" placeholder="Add Name">
+				<bootstrap-tagsinput ng-model="current.jsonData.keepCookies" width-class="width-20 gf-form-input--has-help-icon" tagclass="label label-tag" placeholder="添加cookie名">
 				</bootstrap-tagsinput>
 				<info-popover mode="right-absolute">
 					Grafana Proxy默认删除转发的cookie。 按名称指定应转发到数据源的cookie。
@@ -66,28 +66,28 @@
 	<div class="gf-form-group">
 		<div class="gf-form-inline">
 			<gf-form-checkbox class="gf-form" label="Basic Auth" checked="current.basicAuth" label-class="width-13" switch-class="max-width-6"></gf-form-checkbox>
-			<gf-form-checkbox class="gf-form" label="With Credentials" tooltip="是否应使用跨站点请求发送cookie或auth标头等凭据。" checked="current.withCredentials" label-class="width-13"
+			<gf-form-checkbox class="gf-form" label="随着凭据" tooltip="是否应使用跨站点请求发送cookie或auth标头等凭据。" checked="current.withCredentials" label-class="width-13"
 			  switch-class="max-width-6"></gf-form-checkbox>
 		</div>
 		<div class="gf-form-inline">
-			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="TLS Client Auth" label-class="width-13"
+			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="TLS 客户端认证" label-class="width-13"
 			  checked="current.jsonData.tlsAuth" switch-class="max-width-6"></gf-form-checkbox>
-			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="With CA Cert" tooltip="需要验证自签名TLS证书" checked="current.jsonData.tlsAuthWithCACert" label-class="width-13"
+			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="使用CA证书" tooltip="需要验证自签名TLS证书" checked="current.jsonData.tlsAuthWithCACert" label-class="width-13"
 			  switch-class="max-width-6"></gf-form-checkbox>
 		</div>
 		<div class="gf-form-inline">
-			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="Skip TLS Verify" label-class="width-13"
+			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="跳过TLS验证" label-class="width-13"
 			  checked="current.jsonData.tlsSkipVerify" switch-class="max-width-6"></gf-form-checkbox>
 		</div>
 		<div class="gf-form-inline">
-			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="Forward OAuth Identity" label-class="width-13" tooltip="Forward the user's upstream OAuth identity to the datasource (Their access token gets passed along)." checked="current.jsonData.oauthPassThru" switch-class="max-width-6"></gf-form-checkbox>
+			<gf-form-checkbox class="gf-form" ng-if="current.access=='proxy'" label="转发OAuth身份" label-class="width-13" tooltip="将用户的上游OAuth标识转发给数据源（它们的访问令牌被传递）。" checked="current.jsonData.oauthPassThru" switch-class="max-width-6"></gf-form-checkbox>
 		</div>
 	</div>
 
 	<div class="gf-form-group" ng-if="current.basicAuth">
-		<h6>Basic Auth Details</h6>
+		<h6>基本身份验证详细信息</h6>
 		<div class="gf-form" ng-if="current.basicAuth">
-			<span class="gf-form-label width-10">User</span>
+			<span class="gf-form-label width-10">用户</span>
 			<input class="gf-form-input max-width-21" type="text"  ng-model='current.basicAuthUser' placeholder="用户" required></input>
 		</div>
 		<div class="gf-form">

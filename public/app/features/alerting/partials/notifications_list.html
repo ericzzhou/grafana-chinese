@@ -34,7 +34,7 @@
           </td>
           <td class="text-right">
             <span class="btn btn-secondary btn-small" ng-show="notification.isDefault == true">
-              default
+              默认
             </span>
             <a ng-click="ctrl.deleteNotification(notification.id)" class="btn btn-danger btn-small">
               <i class="fa fa-remove"></i>
@@ -46,13 +46,13 @@
   </div>
   <div ng-if="ctrl.notifications.length === 0">
     <empty-list-cta
-    title= "'There are no notification channels defined yet'"
+    title= "'尚未定义任何通知渠道'"
     buttonIcon= "'gicon gicon-alert-notification-channel'"
     buttonLink= "'alerting/notification/new'"
-    buttonTitle= "'Add channel'"
-    proTip= "'You can include images in your alert notifications.'"
+    buttonTitle= "'添加频道'"
+    proTip= "'您可以在警报通知中包含图像.'"
     proTipLink= "'http://docs.grafana.org/alerting/notifications/'"
-    proTipLinkTitle= "'Learn more'"
+    proTipLinkTitle= "'学到更多'"
     proTipTarget= "'_blank'"
     />
   </div>

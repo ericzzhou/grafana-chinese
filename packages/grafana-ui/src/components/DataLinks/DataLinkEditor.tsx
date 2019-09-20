@@ -54,21 +54,21 @@ export const DataLinkEditor: React.FC<DataLinkEditorProps> = React.memo(
         <div className="gf-form gf-form--inline">
           <FormField
             className="gf-form--grow"
-            label="Title"
+            label="标题"
             value={title}
             onChange={onTitleChange}
             onBlur={onTitleBlur}
             inputWidth={0}
             labelWidth={5}
-            placeholder="Show details"
+            placeholder="显示详情"
           />
-          <Switch label="Open in new tab" checked={value.targetBlank || false} onChange={onOpenInNewTabChanged} />
-          <button className="gf-form-label gf-form-label--btn" onClick={onRemoveClick} title="Remove link">
+          <Switch label="新页面打开" checked={value.targetBlank || false} onChange={onOpenInNewTabChanged} />
+          <button className="gf-form-label gf-form-label--btn" onClick={onRemoveClick} title="删除连接">
             <i className="fa fa-times" />
           </button>
         </div>
         <FormField
-          label="URL"
+          label="网址"
           labelWidth={5}
           inputEl={<DataLinkInput value={value.url} onChange={onUrlChange} suggestions={suggestions} />}
           className={css`
@@ -77,8 +77,7 @@ export const DataLinkEditor: React.FC<DataLinkEditorProps> = React.memo(
         />
         {isLast && (
           <div className={infoTextStyle}>
-            With data links you can reference data variables like series name, labels and values. Type CMD+Space,
-            CTRL+Space, or $ to open variable suggestions.
+            用数据链接，您可以引用数据变量，如系列名称，标签和值。 键入CMD + Space，CTRL + Space或$以打开变量建议
           </div>
         )}
       </div>

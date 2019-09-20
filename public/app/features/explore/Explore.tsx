@@ -267,8 +267,8 @@ export class Explore extends React.PureComponent<ExploreProps> {
         <FadeIn duration={datasourceError ? 150 : 5} in={datasourceError ? true : false}>
           <div className="explore-container">
             <Alert
-              title={`Error connecting to datasource: ${datasourceError}`}
-              button={{ text: 'Reconnect', onClick: this.onReconnect }}
+              title={`连接到数据源出错: ${datasourceError}`}
+              button={{ text: '重新连接', onClick: this.onReconnect }}
             />
           </div>
         </FadeIn>

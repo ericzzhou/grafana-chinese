@@ -206,7 +206,7 @@ export const getFieldDisplayValues = (options: GetFieldDisplayValuesOptions): Fi
       },
       display: {
         numeric: 0,
-        text: 'No data',
+        text: '没数据',
       },
     });
   } else if (values.length === 1 && !fieldOptions.defaults.title) {

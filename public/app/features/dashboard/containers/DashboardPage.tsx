@@ -220,7 +220,7 @@ export class DashboardPage extends PureComponent<Props, State> {
     dashboard.addPanel({
       type: 'add-panel',
       gridPos: { x: 0, y: 0, w: 12, h: 8 },
-      title: 'Panel Title',
+      title: '面板标题',
     });
 
     // scroll to top after adding panel

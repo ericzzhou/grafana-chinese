@@ -43,7 +43,7 @@ func DeleteAPIKey(c *models.ReqContext) Response {
 		return Error(500, "Failed to delete API key", err)
 	}
 
-	return Success("API key deleted")
+	return Success("API密钥已删除")
 }
 
 func (hs *HTTPServer) AddAPIKey(c *models.ReqContext, cmd models.AddApiKeyCommand) Response {

@@ -7,7 +7,7 @@ export interface Panel {
 
 export const panel = new TestPage<Panel>({
   pageObjects: {
-    panelTitle: new ClickablePageObject(Selector.fromAriaLabel('Panel Title')),
+    panelTitle: new ClickablePageObject(Selector.fromAriaLabel('面板标题')),
     share: new ClickablePageObject(Selector.fromAriaLabel('Share panel menu item')),
   },
 });
