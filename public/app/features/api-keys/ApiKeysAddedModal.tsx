@@ -11,7 +11,7 @@ export const ApiKeysAddedModal = (props: Props) => {
       <div className="modal-header">
         <h2 className="modal-header-title">
           <i className="fa fa-key" />
-          <span className="p-l-1">API Key Created</span>
+          <span className="p-l-1">API Key 已创建</span>
         </h2>
 
         <a className="modal-header-close" ng-click="dismiss();">
@@ -28,10 +28,10 @@ export const ApiKeysAddedModal = (props: Props) => {
         </div>
 
         <div className="grafana-info-box" style={{ border: 0 }}>
-          You will only be able to view this key here once! It is not stored in this form. So be sure to copy it now.
+          您只能在此处查看此密钥一次！ 它不以此形式存储。 所以一定要立即复制它。
           <br />
           <br />
-          You can authenticate request using the Authorization HTTP header, example:
+          您可以使用Authorization HTTP标头验证请求，例如：
           <br />
           <br />
           <pre className="small">

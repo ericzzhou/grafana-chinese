@@ -20,9 +20,9 @@ export class ResetPasswordCtrl {
     $scope.navModel = {
       main: {
         icon: 'gicon gicon-branding',
-        text: 'Reset Password',
-        subTitle: 'Reset your Grafana password',
-        breadcrumbs: [{ title: 'Login', url: 'login' }],
+        text: '重设密码',
+        subTitle: '重置您的Grafana密码',
+        breadcrumbs: [{ title: '登录', url: 'login' }],
       },
     };
 
@@ -41,7 +41,7 @@ export class ResetPasswordCtrl {
       }
 
       if ($scope.formModel.newPassword !== $scope.formModel.confirmPassword) {
-        $scope.appEvent('alert-warning', ['New passwords do not match', '']);
+        $scope.appEvent('alert-warning', ['新密码不匹配', '']);
         return;
       }
 

@@ -55,7 +55,7 @@ export class GrafanaBootConfig {
       datasources: {},
       windowTitlePrefix: 'Grafana - ',
       panels: {},
-      newPanelTitle: 'Panel Title',
+      newPanelTitle: '面板标题',
       playlist_timespan: '1m',
       unsaved_changes_warning: true,
       appSubUrl: '',

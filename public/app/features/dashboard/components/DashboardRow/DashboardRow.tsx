@@ -55,9 +55,9 @@ export class DashboardRow extends React.Component<DashboardRowProps, any> {
 
   onDelete = () => {
     appEvents.emit('confirm-modal', {
-      title: 'Delete Row',
-      text: 'Are you sure you want to remove this row and all its panels?',
-      altActionText: 'Delete row only',
+      title: '删除行',
+      text: '是否确实要删除此行及其所有面板?',
+      altActionText: '仅删除行',
       icon: 'fa-trash',
       onConfirm: () => {
         this.props.dashboard.removeRow(this.props.panel, true);

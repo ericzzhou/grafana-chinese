@@ -73,12 +73,12 @@ export class NewDashboardCtrl {
           folderId: Number($routeParams.folderId),
         },
         dashboard: {
-          title: 'New dashboard',
+          title: '新的仪表盘',
           panels: [
             {
               type: 'add-panel',
               gridPos: { x: 0, y: 0, w: 12, h: 9 },
-              title: 'Panel Title',
+              title: '面板标题',
             },
           ],
         },

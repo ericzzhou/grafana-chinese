@@ -163,10 +163,10 @@ export default class AdminEditUserCtrl {
 
     $scope.deleteUser = (user: any) => {
       $scope.appEvent('confirm-modal', {
-        title: 'Delete',
-        text: 'Do you want to delete ' + user.login + '?',
+        title: '删除',
+        text: '确定要删除 ' + user.login + '?',
         icon: 'fa-trash',
-        yesText: 'Delete',
+        yesText: '删除',
         onConfirm: () => {
           backendSrv.delete('/api/admin/users/' + user.id).then(() => {
             $location.path('/admin/users');

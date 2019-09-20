@@ -31,7 +31,7 @@ export const actionCreatorFactory = <Payload>(type: string): ActionCreatorFactor
   };
 
   if (allActionCreators.some(t => (t && type ? t.toLocaleUpperCase() === type.toLocaleUpperCase() : false))) {
-    throw new Error(`There is already an actionCreator defined with the type ${type}`);
+    throw new Error(`已经有一个使用该类型定义的actionCreator ${type}`);
   }
 
   allActionCreators.push(type);
@@ -45,7 +45,7 @@ export const noPayloadActionCreatorFactory = (type: string): NoPayloadActionCrea
   };
 
   if (allActionCreators.some(t => (t && type ? t.toLocaleUpperCase() === type.toLocaleUpperCase() : false))) {
-    throw new Error(`There is already an actionCreator defined with the type ${type}`);
+    throw new Error(`已经有一个使用该类型定义的actionCreator ${type}`);
   }
 
   allActionCreators.push(type);

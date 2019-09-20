@@ -115,7 +115,7 @@ export class PromQueryEditor extends PureComponent<Props, State> {
               tooltip="Controls the name of the time series, using name or pattern. For example
         {{hostname}} will be replaced with label value for the label hostname."
             >
-              Legend
+              图例
             </FormLabel>
             <input
               type="text"
@@ -134,7 +134,7 @@ export class PromQueryEditor extends PureComponent<Props, State> {
             Note that the actual dates used in the query will be adjusted
         to a multiple of the interval step."
             >
-              Min step
+              最小步骤
             </FormLabel>
             <input
               type="text"
@@ -147,7 +147,7 @@ export class PromQueryEditor extends PureComponent<Props, State> {
           </div>
 
           <div className="gf-form">
-            <div className="gf-form-label">Resolution</div>
+            <div className="gf-form-label">解析度</div>
             <Select
               isSearchable={false}
               options={INTERVAL_FACTOR_OPTIONS}
@@ -157,7 +157,7 @@ export class PromQueryEditor extends PureComponent<Props, State> {
           </div>
 
           <div className="gf-form">
-            <div className="gf-form-label">Format</div>
+            <div className="gf-form-label">格式</div>
             <Select isSearchable={false} options={FORMAT_OPTIONS} onChange={this.onFormatChange} value={formatOption} />
             <Switch label="Instant" checked={instant} onChange={this.onInstantChange} />
 

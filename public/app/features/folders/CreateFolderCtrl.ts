@@ -28,7 +28,7 @@ export default class CreateFolderCtrl {
     }
 
     return this.backendSrv.createFolder({ title: this.title }).then((result: any) => {
-      appEvents.emit('alert-success', ['Folder Created', 'OK']);
+      appEvents.emit('alert-success', ['已创建文件夹', 'OK']);
       this.$location.url(locationUtil.stripBaseFromUrl(result.url));
     });
   }

@@ -50,13 +50,13 @@ function getTitleTemplate(title: string | undefined, stats: string[], data?: Dat
 
   const parts: string[] = [];
   if (stats.length > 1) {
-    parts.push('$' + VAR_CALC);
+    parts.push('${' + VAR_CALC + '}');
   }
   if (data.length > 1) {
     parts.push('${' + VAR_SERIES_NAME + '}');
   }
   if (fieldCount > 1 || !parts.length) {
-    parts.push('$' + VAR_FIELD_NAME);
+    parts.push('${' + VAR_FIELD_NAME + '}');
   }
   return parts.join(' ');
 }
@@ -206,7 +206,7 @@ export const getFieldDisplayValues = (options: GetFieldDisplayValuesOptions): Fi
       },
       display: {
         numeric: 0,
-        text: 'No data',
+        text: '没数据',
       },
     });
   } else if (values.length === 1 && !fieldOptions.defaults.title) {

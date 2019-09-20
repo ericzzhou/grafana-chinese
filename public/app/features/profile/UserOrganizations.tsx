@@ -20,20 +20,20 @@ export class UserOrganizations extends PureComponent<Props> {
     const { isLoading, orgs, user } = this.props;
 
     if (isLoading) {
-      return <LoadingPlaceholder text="Loading organizations..." />;
+      return <LoadingPlaceholder text="加载组织..." />;
     }
 
     return (
       <>
         {orgs.length > 0 && (
           <>
-            <h3 className="page-sub-heading">Organizations</h3>
+            <h3 className="page-sub-heading">组织</h3>
             <div className="gf-form-group">
               <table className="filter-table form-inline">
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Role</th>
+                    <th>名称</th>
+                    <th>角色</th>
                     <th />
                   </tr>
                 </thead>
@@ -45,7 +45,7 @@ export class UserOrganizations extends PureComponent<Props> {
                         <td>{org.role}</td>
                         <td className="text-right">
                           {org.orgId === user.orgId ? (
-                            <span className="btn btn-primary btn-small">Current</span>
+                            <span className="btn btn-primary btn-small">当前</span>
                           ) : (
                             <Button
                               variant="inverse"
@@ -54,7 +54,7 @@ export class UserOrganizations extends PureComponent<Props> {
                                 this.props.setUserOrg(org);
                               }}
                             >
-                              Select
+                              选择
                             </Button>
                           )}
                         </td>

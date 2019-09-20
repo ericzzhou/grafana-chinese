@@ -28,7 +28,7 @@ const timeRangeValidationEvents: ValidationEvents = {
         }
         return rangeUtil.isValidTimeSpan(value);
       },
-      errorMessage: 'Not a valid timespan',
+      errorMessage: '不是有效的时间跨度',
     },
   ],
 };
@@ -54,39 +54,31 @@ interface State {
 export class QueryOptions extends PureComponent<Props, State> {
   allOptions: any = {
     cacheTimeout: {
-      label: 'Cache timeout',
+      label: '缓存超时',
       placeholder: '60',
       name: 'cacheTimeout',
-      tooltipInfo: (
-        <>
-          If your time series store has a query cache this option can override the default cache timeout. Specify a
-          numeric value in seconds.
-        </>
-      ),
+      tooltipInfo: <>如果时间序列存储具有查询缓存，则此选项可以覆盖默认缓存超时。指定以秒为单位的数值。</>,
     },
     maxDataPoints: {
-      label: 'Max data points',
+      label: '最大数据点',
       placeholder: 'auto',
       name: 'maxDataPoints',
       tooltipInfo: (
         <>
-          The maximum data points the query should return. For graphs this is automatically set to one data point per
-          pixel. For some data sources this can also be capped in the datasource settings page. With streaming data,
-          this value is used for the rolling buffer.
+          查询应返回的最大数据点。对于图形，这会自动设置为每个像素一个数据点。对于某些数据源，也可以在“数据源设置”页中限制HIS。对于流数据，此值用于滚动缓冲区。
         </>
       ),
     },
     minInterval: {
-      label: 'Min time interval',
+      label: '最短时间间隔l',
       placeholder: '0',
       name: 'minInterval',
       panelKey: 'interval',
       tooltipInfo: (
         <>
-          A lower limit for the auto group by time interval. Recommended to be set to write frequency, for example{' '}
-          <code>1m</code> if your data is written every minute. Access auto interval via variable{' '}
-          <code>$__interval</code> for time range string and <code>$__interval_ms</code> for numeric variable that can
-          be used in math expressions.
+          按时间间隔的自动组的下限。建议设置为写入频率，例如{''}
+          <code>1m</code>，如果您的数据每分钟写入一次。对于时间范围字符串，通过变量{''}
+          <code>$__interval</code>访问自动间隔， 对于可以在数学表达式中使用的数字变量，访问<code>$__interval_ms</code>
         </>
       ),
     },
@@ -195,7 +187,7 @@ export class QueryOptions extends PureComponent<Props, State> {
         {this.renderOptions()}
 
         <div className="gf-form">
-          <FormLabel>Relative time</FormLabel>
+          <FormLabel>相对时间</FormLabel>
           <Input
             type="text"
             className="width-6"
@@ -209,7 +201,7 @@ export class QueryOptions extends PureComponent<Props, State> {
         </div>
 
         <div className="gf-form">
-          <span className="gf-form-label">Time shift</span>
+          <span className="gf-form-label">时移(Time shift)</span>
           <Input
             type="text"
             className="width-6"

@@ -59,10 +59,10 @@ export class GeneralTab extends PureComponent<Props> {
     const suggestions = getPanelLinksVariableSuggestions();
 
     return (
-      <EditorTabBody heading="General" toolbarItems={[]}>
+      <EditorTabBody heading="一般" toolbarItems={[]}>
         <>
           <div ref={element => (this.element = element)} />
-          <PanelOptionsGroup title="Panel links">
+          <PanelOptionsGroup title="面板链接">
             <DataLinksEditor
               value={panel.links}
               onChange={this.onDataLinksChanged}

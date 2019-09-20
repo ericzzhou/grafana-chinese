@@ -57,22 +57,22 @@ export class SettingsCtrl {
 
     if (this.dashboard.meta.canEdit) {
       this.sections.push({
-        title: 'General',
+        title: '常规',
         id: 'settings',
         icon: 'gicon gicon-preferences',
       });
       this.sections.push({
-        title: 'Annotations',
+        title: '注解',
         id: 'annotations',
         icon: 'gicon gicon-annotation',
       });
       this.sections.push({
-        title: 'Variables',
+        title: '变量',
         id: 'templating',
         icon: 'gicon gicon-variable',
       });
       this.sections.push({
-        title: 'Links',
+        title: '链接',
         id: 'links',
         icon: 'gicon gicon-link',
       });
@@ -80,7 +80,7 @@ export class SettingsCtrl {
 
     if (this.dashboard.id && this.dashboard.meta.canSave) {
       this.sections.push({
-        title: 'Versions',
+        title: '版本',
         id: 'versions',
         icon: 'fa fa-fw fa-history',
       });
@@ -88,7 +88,7 @@ export class SettingsCtrl {
 
     if (this.dashboard.id && this.dashboard.meta.canAdmin) {
       this.sections.push({
-        title: 'Permissions',
+        title: '权限',
         id: 'permissions',
         icon: 'fa fa-fw fa-lock',
       });
@@ -96,7 +96,7 @@ export class SettingsCtrl {
 
     if (this.dashboard.meta.canMakeEditable) {
       this.sections.push({
-        title: 'General',
+        title: '常规',
         icon: 'gicon gicon-preferences',
         id: 'make_editable',
       });
@@ -186,10 +186,9 @@ export class SettingsCtrl {
 
     if (this.dashboard.meta.provisioned) {
       appEvents.emit('confirm-modal', {
-        title: 'Cannot delete provisioned dashboard',
+        title: '无法删除已设置的仪表板',
         text: `
-          This dashboard is managed by Grafanas provisioning and cannot be deleted. Remove the dashboard from the
-          config file to delete it.
+          此仪表板由Grafanas设置管理，无法删除。从中卸下仪表板要删除的配置文件.
         `,
         text2: `
           <i>See <a class="external-link" href="http://docs.grafana.org/administration/provisioning/#dashboards" target="_blank">
@@ -214,12 +213,12 @@ export class SettingsCtrl {
     }
 
     appEvents.emit('confirm-modal', {
-      title: 'Delete',
-      text: 'Do you want to delete this dashboard?',
+      title: '删除',
+      text: '是否要删除此仪表板?',
       text2: text2,
       icon: 'fa-trash',
       confirmText: confirmText,
-      yesText: 'Delete',
+      yesText: '删除',
       onConfirm: () => {
         this.dashboard.meta.canSave = false;
         this.deleteDashboardConfirmed();

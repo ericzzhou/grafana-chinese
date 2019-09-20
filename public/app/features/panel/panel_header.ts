@@ -35,7 +35,7 @@ function renderMenuItem(item: AngularPanelMenuItem, ctrl: any) {
   }
 
   html += `><i class="${item.icon}"></i>`;
-  html += `<span class="dropdown-item-text" aria-label="${item.text} panel menu item">${item.text}</span>`;
+  html += `<span class="dropdown-item-text" aria-label="${item.text} 面板菜单项">${item.text}</span>`;
 
   if (item.shortcut) {
     html += `<span class="dropdown-menu-item-shortcut">${item.shortcut}</span>`;

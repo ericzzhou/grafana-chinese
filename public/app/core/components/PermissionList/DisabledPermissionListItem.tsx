@@ -18,7 +18,7 @@ export default class DisabledPermissionListItem extends Component<Props, any> {
         </td>
         <td style={{ width: '90%' }}>
           {item.name}
-          <span className="filter-table__weak-italic"> (Role)</span>
+          <span className="filter-table__weak-italic"> (角色)</span>
         </td>
         <td />
         <td className="query-keyword">Can</td>

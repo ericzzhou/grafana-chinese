@@ -8,7 +8,7 @@ const template = `
 <div class="modal-body">
   <div class="modal-header">
     <h2 class="modal-header-title">
-      <i class="fa fa-save"></i><span class="p-l-1">Cannot save provisioned dashboard</span>
+      <i class="fa fa-save"></i><span class="p-l-1">无法保存已设置的仪表板</span>
     </h2>
 
     <a class="modal-header-close" ng-click="ctrl.dismiss();">
@@ -18,10 +18,10 @@ const template = `
 
   <div class="modal-content">
     <small>
-      This dashboard cannot be saved from Grafana's UI since it has been provisioned from another source.
-      Copy the JSON or save it to a file below. Then you can update your dashboard in corresponding provisioning source.<br/>
-      <i>See <a class="external-link" href="http://docs.grafana.org/administration/provisioning/#dashboards" target="_blank">
-      documentation</a> for more information about provisioning.</i>
+     无法从Grafana的UI保存此仪表板，因为它是从其他源设置的。
+复制json或将其保存到下面的文件中。然后可以在相应的配置源中更新仪表板。<br/>
+      <i>查看 <a class="external-link" href="http://docs.grafana.org/administration/provisioning/#dashboards" target="_blank">
+      文档</a> 有关资源调配的详细信息.</i>
     </small>
     <div class="p-t-1">
       File path: {{ctrl.dashboardModel.meta.provisionedExternalId}}
@@ -32,12 +32,12 @@ const template = `
       </div>
       <div class="gf-form-button-row">
         <button class="btn btn-primary" clipboard-button="ctrl.getJsonForClipboard()">
-          Copy JSON to Clipboard
+          复制 JSON 到剪贴板
         </button>
         <button class="btn btn-secondary" clipboard-button="ctrl.save()">
-          Save JSON to file
+          保存 JSON 到文件
         </button>
-        <a class="btn btn-link" ng-click="ctrl.dismiss();">Cancel</a>
+        <a class="btn btn-link" ng-click="ctrl.dismiss();">取消</a>
       </div>
     </div>
   </div>

@@ -25,25 +25,22 @@ export class AnnotationsEditorCtrl {
   };
 
   emptyListCta = {
-    title: 'There are no custom annotation queries added yet',
+    title: '尚未添加自定义注释查询',
     buttonIcon: 'gicon gicon-annotation',
-    buttonTitle: 'Add Annotation Query',
+    buttonTitle: '添加注释查询',
     infoBox: {
-      __html: `<p>Annotations provide a way to integrate event data into your graphs. They are visualized as vertical lines
-    and icons on all graph panels. When you hover over an annotation icon you can get event text &amp; tags for
-    the event. You can add annotation events directly from grafana by holding CTRL or CMD + click on graph (or
-    drag region). These will be stored in Grafana's annotation database.
+      __html: `<p>注释提供了一种将事件数据集成到图形中的方法。它们被视为垂直线以及所有图表面板上的图标。当您将鼠标悬停在批注图标上时，可以获取事件。按住ctrl或cmd并单击图形（或拖动区域），可以直接从grafana添加注释事件。这些将存储在Grafana的注释数据库中.
   </p>
   Checkout the
   <a class='external-link' target='_blank' href='http://docs.grafana.org/reference/annotations/'
-    >Annotations documentation</a
+    >说明文件</a
   >
-  for more information.`,
+  了解更多信息.`,
     },
-    infoBoxTitle: 'What are annotations?',
+    infoBoxTitle: '什么是注释?',
   };
 
-  showOptions: any = [{ text: 'All Panels', value: 0 }, { text: 'Specific Panels', value: 1 }];
+  showOptions: any = [{ text: '所有面板', value: 0 }, { text: '特定面板', value: 1 }];
 
   /** @ngInject */
   constructor(private $scope: any, private datasourceSrv: DatasourceSrv) {

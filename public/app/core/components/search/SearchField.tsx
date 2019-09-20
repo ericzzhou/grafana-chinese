@@ -78,7 +78,7 @@ export const SearchField: React.FunctionComponent<SearchFieldProps> = ({ query, 
 
         <input
           type="text"
-          placeholder="Find dashboards by name"
+          placeholder="按名称查找仪表板"
           value={query.query}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
             onChange(event.currentTarget.value);

@@ -157,17 +157,17 @@ class GraphCtrl extends MetricsPanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Display options', 'public/app/plugins/panel/graph/tab_display.html');
-    this.addEditorTab('Axes', axesEditorComponent);
-    this.addEditorTab('Legend', 'public/app/plugins/panel/graph/tab_legend.html');
-    this.addEditorTab('Thresholds & Time Regions', 'public/app/plugins/panel/graph/tab_thresholds_time_regions.html');
-    this.addEditorTab('Data links', 'public/app/plugins/panel/graph/tab_drilldown_links.html');
+    this.addEditorTab('显示选项', 'public/app/plugins/panel/graph/tab_display.html');
+    this.addEditorTab('轴', axesEditorComponent);
+    this.addEditorTab('图例', 'public/app/plugins/panel/graph/tab_legend.html');
+    this.addEditorTab('阈值和时区', 'public/app/plugins/panel/graph/tab_thresholds_time_regions.html');
+    this.addEditorTab('数据链接', 'public/app/plugins/panel/graph/tab_drilldown_links.html');
     this.subTabIndex = 0;
   }
 
   onInitPanelActions(actions: any[]) {
-    actions.push({ text: 'Export CSV', click: 'ctrl.exportCsv()' });
-    actions.push({ text: 'Toggle legend', click: 'ctrl.toggleLegend()', shortcut: 'p l' });
+    actions.push({ text: '导出CSV', click: 'ctrl.exportCsv()' });
+    actions.push({ text: '切换图例', click: 'ctrl.toggleLegend()', shortcut: 'p l' });
   }
 
   issueQueries(datasource: any) {

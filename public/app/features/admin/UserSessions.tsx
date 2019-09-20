@@ -24,16 +24,16 @@ export class UserSessions extends PureComponent<Props> {
 
     return (
       <>
-        <h3 className="page-heading">Sessions</h3>
+        <h3 className="page-heading">会话</h3>
         <div className="gf-form-group">
           <div className="gf-form">
             <table className="filter-table form-inline">
               <thead>
                 <tr>
-                  <th>Last seen</th>
-                  <th>Logged on</th>
-                  <th>IP address</th>
-                  <th colSpan={2}>Browser &amp; OS</th>
+                  <th>最后一次登录</th>
+                  <th>登录时间</th>
+                  <th>IP地址</th>
+                  <th colSpan={2}>浏览器 &amp; 系统</th>
                 </tr>
               </thead>
               <tbody>
@@ -43,7 +43,7 @@ export class UserSessions extends PureComponent<Props> {
                       <td>{session.isActive ? 'Now' : session.seenAt}</td>
                       <td>{session.createdAt}</td>
                       <td>{session.clientIp}</td>
-                      <td>{`${session.browser} on ${session.os} ${session.osVersion}`}</td>
+                      <td>{`${session.browser} 在 ${session.os} ${session.osVersion}`}</td>
                       <td>
                         <button className="btn btn-danger btn-small" onClick={this.handleSessionRevoke(session.id)}>
                           <i className="fa fa-power-off" />
@@ -57,7 +57,7 @@ export class UserSessions extends PureComponent<Props> {
           <div className="gf-form-button-row">
             {sessions.length > 0 && (
               <button className="btn btn-danger" onClick={this.handleAllSessionsRevoke}>
-                Logout user from all devices
+                从所有设备注销用户
               </button>
             )}
           </div>

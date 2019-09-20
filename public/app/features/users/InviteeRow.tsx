@@ -34,7 +34,7 @@ class InviteeRow extends PureComponent<Props> {
               style={{ position: 'absolute', right: -1000 }}
               ref={this.copyUrlRef}
             />
-            Copy Invite
+            复制邀请
           </button>
           &nbsp;
         </td>

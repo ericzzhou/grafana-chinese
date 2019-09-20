@@ -239,15 +239,15 @@ func (proxy *DataSourceProxy) getDirector() func(req *http.Request) {
 
 func (proxy *DataSourceProxy) validateRequest() error {
 	if !checkWhiteList(proxy.ctx, proxy.targetUrl.Host) {
-		return errors.New("Target url is not a valid target")
+		return errors.New("目标网址不是有效目标")
 	}
 
 	if proxy.ds.Type == m.DS_PROMETHEUS {
 		if proxy.ctx.Req.Request.Method == "DELETE" {
-			return errors.New("Deletes not allowed on proxied Prometheus datasource")
+			return errors.New("删除代理的Prometheus数据源上不允许的内容")
 		}
 		if proxy.ctx.Req.Request.Method == "PUT" {
-			return errors.New("Puts not allowed on proxied Prometheus datasource")
+			return errors.New("P在代理的Prometheus数据源上不允许使用")
 		}
 		if proxy.ctx.Req.Request.Method == "POST" && !(proxy.proxyPath == "api/v1/query" || proxy.proxyPath == "api/v1/query_range") {
 			return errors.New("Posts not allowed on proxied Prometheus datasource except on /query and /query_range")

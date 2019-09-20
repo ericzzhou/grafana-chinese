@@ -2,29 +2,29 @@
 
 <div class="page-container page-body">
 	<div class="page-sub-heading">
-		<h3 class="page-sub-heading">Add new user</h3>
+		<h3 class="page-sub-heading">添加新用户</h3>
 	</div>
 
 	<form name="userForm" class="gf-form-group">
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Name</span>
+			<span class="gf-form-label width-10">姓名</span>
 			<input type="text" required ng-model="user.name" class="gf-form-input max-width-20" >
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Email</span>
+			<span class="gf-form-label width-10">电子邮箱</span>
 			<input type="email" ng-model="user.email" class="gf-form-input max-width-20" >
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Username</span>
+			<span class="gf-form-label width-10">用户名</span>
 			<input type="text" ng-model="user.login" class="gf-form-input max-width-20" >
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Password</span>
+			<span class="gf-form-label width-10">密码</span>
 			<input type="password" required ng-model="user.password" class="gf-form-input max-width-20" >
 		</div>
 
 		<div class="gf-form-button-row">
-			<button type="submit" class="btn btn-primary" ng-click="create()">Create</button>
+			<button type="submit" class="btn btn-primary" ng-click="create()">创建</button>
 		</div>
 	</form>
 </div>

@@ -5,14 +5,14 @@
   <div class="panel-options-group">
     <div class="panel-options-group__body">
       <div class="gf-form-group">
-        <h4 class="section-heading">Rule</h4>
+        <h4 class="section-heading">规则</h4>
         <div class="gf-form-inline">
           <div class="gf-form">
-            <span class="gf-form-label width-6">Name</span>
+            <span class="gf-form-label width-6">名字</span>
             <input type="text" class="gf-form-input width-20" ng-model="ctrl.alert.name">
           </div>
           <div class="gf-form">
-            <span class="gf-form-label width-9">Evaluate every</span>
+            <span class="gf-form-label width-9">评估每一个</span>
             <input class="gf-form-input max-width-6" type="text" ng-model="ctrl.alert.frequency">
           </div>
           <div class="gf-form max-width-11">
@@ -20,27 +20,27 @@
             <input type="text" class="gf-form-input max-width-6 gf-form-input--has-help-icon" ng-model="ctrl.alert.for"
                   spellcheck='false' placeholder="5m">
             <info-popover mode="right-absolute">
-              If an alert rule has a configured For and the query violates the configured
-              threshold it
-              will first go from OK to Pending.
-              Going from OK to Pending Grafana will not send any notifications. Once the alert
-              rule
-              has
-              been firing for more than For duration, it will change to Alerting and send alert
-              notifications.
+              如果警报规则已配置为For且查询违反配置
+               它的门槛
+               将首先从OK转为待定。
+               从OK到Pending Grafana不会发送任何通知。 一旦发出警报
+               规则
+               拥有
+               射击时间超过持续时间，它将变为警报并发送警报
+              通知.
             </info-popover>
           </div>
         </div>
       </div>
 
       <div class="gf-form-group">
-        <h4 class="section-heading">Conditions</h4>
+        <h4 class="section-heading">条件</h4>
         <div class="gf-form-inline" ng-repeat="conditionModel in ctrl.conditionModels">
           <div class="gf-form">
             <metric-segment-model css-class="query-keyword width-5" ng-if="$index"
                                   property="conditionModel.operator.type" options="ctrl.evalOperators"
                                   custom="false"></metric-segment-model>
-            <span class="gf-form-label query-keyword width-5" ng-if="$index===0">WHEN</span>
+            <span class="gf-form-label query-keyword width-5" ng-if="$index===0">什么时候</span>
           </div>
           <div class="gf-form">
             <query-part-editor class="gf-form-label query-part width-9"
@@ -93,10 +93,10 @@
       </div>
 
       <div class="gf-form-group">
-        <h4 class="section-heading">No Data & Error Handling</h4>
+        <h4 class="section-heading">没有数据和错误处理</h4>
         <div class="gf-form-inline">
           <div class="gf-form">
-            <span class="gf-form-label width-15">If no data or all values are null</span>
+            <span class="gf-form-label width-15">如果没有数据或所有值都为null</span>
           </div>
           <div class="gf-form">
             <span class="gf-form-label query-keyword">SET STATE TO</span>
@@ -110,7 +110,7 @@
 
         <div class="gf-form-inline">
           <div class="gf-form">
-            <span class="gf-form-label width-15">If execution error or timeout</span>
+            <span class="gf-form-label width-15">如果执行错误或超时</span>
           </div>
           <div class="gf-form">
             <span class="gf-form-label query-keyword">SET STATE TO</span>
@@ -126,11 +126,11 @@
   </div>
 
   <div class="panel-options-group">
-    <div class="panel-options-group__header">Notifications</div>
+    <div class="panel-options-group__header">通知</div>
     <div class="panel-options-group__body">
       <div class="gf-form-inline">
         <div class="gf-form">
-          <span class="gf-form-label width-8">Send to</span>
+          <span class="gf-form-label width-8">发给</span>
         </div>
         <div class="gf-form" ng-repeat="nc in ctrl.alertNotifications">
           <span class="gf-form-label" ng-style="{'background-color': nc.bgColor }">
@@ -145,12 +145,12 @@
         </div>
       </div>
       <div class="gf-form gf-form--v-stretch">
-        <span class="gf-form-label width-8">Message</span>
+        <span class="gf-form-label width-8">信息</span>
         <textarea class="gf-form-input" rows="10" ng-model="ctrl.alert.message"
                   placeholder="Notification message details..."></textarea>
       </div>
       <div class="gf-form">
-        <span class="gf-form-label width-8">Tags</span>
+        <span class="gf-form-label width-8">标签</span>
         <div class="gf-form-group">
           <div class="gf-form-inline" ng-repeat="(name, value) in ctrl.alert.alertRuleTags">
             <label class="gf-form-label width-15">{{ name }}</label>
@@ -174,7 +174,7 @@
             <div class="gf-form">
               <label class="gf-form-label">
                 <a class="pointer" tabindex="1" ng-click="ctrl.addAlertRuleTag()">
-                  <i class="fa fa-plus"></i>&nbsp;Add Tag
+                  <i class="fa fa-plus"></i>&nbsp;添加标签
                 </a>
               </label>
             </div>

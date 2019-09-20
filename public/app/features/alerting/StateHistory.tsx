@@ -43,10 +43,10 @@ class StateHistory extends PureComponent<Props, State> {
     const { dashboard, onRefresh, panelId } = this.props;
 
     appEvents.emit('confirm-modal', {
-      title: 'Delete Alert History',
-      text: 'Are you sure you want to remove all history & annotations for this alert?',
+      title: '删除警报历史记录',
+      text: '您确定要删除此提醒的所有历史记录和注释吗？?',
       icon: 'fa-trash',
-      yesText: 'Yes',
+      yesText: '是',
       onConfirm: () => {
         getBackendSrv()
           .post('/api/annotations/mass-delete', {
@@ -99,7 +99,7 @@ class StateHistory extends PureComponent<Props, State> {
               );
             })
           ) : (
-            <i>No state changes recorded</i>
+            <i>没有记录状态变化</i>
           )}
         </ol>
       </div>

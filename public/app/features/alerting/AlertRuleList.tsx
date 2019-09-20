@@ -104,7 +104,7 @@ export class AlertRuleList extends PureComponent<Props, any> {
               />
             </div>
             <div className="gf-form">
-              <label className="gf-form-label">States</label>
+              <label className="gf-form-label">状态</label>
 
               <div className="gf-form-select-wrapper width-13">
                 <select className="gf-form-input" onChange={this.onStateFilterChanged} value={this.getStateFilter()}>
@@ -114,7 +114,7 @@ export class AlertRuleList extends PureComponent<Props, any> {
             </div>
             <div className="page-action-bar__spacer" />
             <a className="btn btn-secondary" onClick={this.onOpenHowTo}>
-              How to add an alert
+              如何添加提醒
             </a>
           </div>
           <section>

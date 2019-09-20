@@ -77,11 +77,10 @@ export class ChangePassword extends PureComponent<Props, State> {
     return (
       <div className="login-inner-box" id="change-password-view">
         <div className="text-left login-change-password-info">
-          <h5>Change Password</h5>
-          Before you can get started with awesome dashboards we need you to make your account more secure by changing
-          your password.
+          <h5>更改密码</h5>
+          在您开始使用精彩的信息中心之前，我们需要您通过更改来提高帐户的安全性你的密码。
           <br />
-          You can change your password again later.
+          您可以稍后再次更改密码。
         </div>
         <form className="login-form-group gf-form-group">
           <div className="login-form">
@@ -91,7 +90,7 @@ export class ChangePassword extends PureComponent<Props, State> {
               name="newPassword"
               className="gf-form-input login-form-input"
               required
-              placeholder="New password"
+              placeholder="新密码"
               onChange={this.onNewPasswordChange}
               ref={input => {
                 this.userInput = input;
@@ -105,17 +104,14 @@ export class ChangePassword extends PureComponent<Props, State> {
               className="gf-form-input login-form-input"
               required
               ng-model="command.confirmNew"
-              placeholder="Confirm new password"
+              placeholder="确认密码"
               onChange={this.onConfirmPasswordChange}
             />
           </div>
           <div className="login-button-group login-button-group--right text-right">
-            <Tooltip
-              placement="bottom"
-              content="If you skip you will be prompted to change password next time you login."
-            >
+            <Tooltip placement="bottom" content="如果您跳过，则下次登录时会提示您更改密码.">
               <a className="btn btn-link" onClick={this.onSkip}>
-                Skip
+                跳过
               </a>
             </Tooltip>
 
@@ -125,7 +121,7 @@ export class ChangePassword extends PureComponent<Props, State> {
               onClick={this.onSubmit}
               disabled={!this.state.valid}
             >
-              Save
+              保存
             </button>
           </div>
         </form>

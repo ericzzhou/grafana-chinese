@@ -82,7 +82,7 @@ export class MetricSelect extends React.Component<Props, State> {
         isSearchable={isSearchable}
         maxMenuHeight={500}
         placeholder={placeholder}
-        noOptionsMessage={() => 'No options found'}
+        noOptionsMessage={() => '找不到选项'}
         value={selectedOption}
       />
     );

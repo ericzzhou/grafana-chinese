@@ -73,7 +73,7 @@ describe('Gauge Panel Migrations', () => {
       ],
       timeFrom: null,
       timeShift: null,
-      title: 'Panel Title',
+      title: '面板标题',
       type: 'gauge',
     } as PanelModel;
 

@@ -1,7 +1,7 @@
 <div class="modal-body">
   <div class="modal-header">
     <h2 class="modal-header-title">
-      Export CSV
+      导出 CSV
     </h2>
 
     <a class="modal-header-close" ng-click="ctrl.dismiss();">
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="gf-form" ng-hide="ctrl.panel === 'table'">
-        <label class="gf-form-label width-10">Date Time Format</label>
+        <label class="gf-form-label width-10">日期时间格式</label>
         <input type="text" class="gf-form-input" ng-model="ctrl.dateTimeFormat">
       </div>
       <gf-form-switch class="gf-form"
@@ -29,8 +29,8 @@
     </div>
 
     <div class="gf-form-button-row text-center">
-      <a class="btn btn-primary" ng-click="ctrl.export();">Export</a>
-      <a class="btn-text" ng-click="ctrl.dismiss();">Cancel</a>
+      <a class="btn btn-primary" ng-click="ctrl.export();">导出</a>
+      <a class="btn-text" ng-click="ctrl.dismiss();">取消</a>
     </div>
   </div>
 </div>

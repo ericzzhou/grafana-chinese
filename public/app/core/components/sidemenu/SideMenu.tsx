@@ -20,7 +20,7 @@ export class SideMenu extends PureComponent {
         <i className="fa fa-bars" />
         <span className="sidemenu__close">
           <i className="fa fa-times" />
-          &nbsp;Close
+          &nbsp;关闭
         </span>
       </div>,
       <TopSection key="topsection" />,

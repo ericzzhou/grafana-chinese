@@ -134,7 +134,7 @@ export class QueryInspector extends PureComponent<Props, State> {
   };
 
   onClipboardSuccess = () => {
-    appEvents.emit('alert-success', ['Content copied to clipboard']);
+    appEvents.emit('alert-success', ['内容复制到剪贴板']);
   };
 
   onToggleExpand = () => {
@@ -173,12 +173,12 @@ export class QueryInspector extends PureComponent<Props, State> {
 
     const collapse = (
       <>
-        <i className="fa fa-minus-square-o" /> Collapse All
+        <i className="fa fa-minus-square-o" /> 全部收缩
       </>
     );
     const expand = (
       <>
-        <i className="fa fa-plus-square-o" /> Expand All
+        <i className="fa fa-plus-square-o" /> 展开全部
       </>
     );
     return allNodesExpanded ? collapse : expand;
@@ -189,7 +189,7 @@ export class QueryInspector extends PureComponent<Props, State> {
     const openNodes = this.getNrOfOpenNodes();
 
     if (isLoading) {
-      return <LoadingPlaceholder text="Loading query inspector..." />;
+      return <LoadingPlaceholder text="加载查询检查器..." />;
     }
 
     return (
@@ -203,7 +203,7 @@ export class QueryInspector extends PureComponent<Props, State> {
             text={this.getTextForClipboard}
             onSuccess={this.onClipboardSuccess}
           >
-            <i className="fa fa-clipboard" /> Copy to Clipboard
+            <i className="fa fa-clipboard" /> 复制到剪贴板
           </CopyToClipboard>
         </div>
 

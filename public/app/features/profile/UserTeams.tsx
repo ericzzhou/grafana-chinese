@@ -17,22 +17,22 @@ export class UserTeams extends PureComponent<Props> {
     const { isLoading, teams } = this.props;
 
     if (isLoading) {
-      return <LoadingPlaceholder text="Loading teams..." />;
+      return <LoadingPlaceholder text="加载团队..." />;
     }
 
     return (
       <>
         {teams.length > 0 && (
           <>
-            <h3 className="page-sub-heading">Teams</h3>
+            <h3 className="page-sub-heading">团队</h3>
             <div className="gf-form-group">
               <table className="filter-table form-inline">
                 <thead>
                   <tr>
                     <th />
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Members</th>
+                    <th>名称</th>
+                    <th>邮箱</th>
+                    <th>成员</th>
                   </tr>
                 </thead>
                 <tbody>

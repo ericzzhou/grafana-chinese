@@ -155,7 +155,7 @@ export class QueryEditorRow extends PureComponent<Props, State> {
       );
     }
 
-    return <div>Data source plugin does not export any Query Editor component</div>;
+    return <div>数据源插件不导出任何查询编辑器组件</div>;
   }
 
   onToggleEditMode = () => {
@@ -222,7 +222,7 @@ export class QueryEditorRow extends PureComponent<Props, State> {
             {!isCollapsed && <i className="fa fa-caret-down" />}
             <span>{query.refId}</span>
             {inMixedMode && <em className="query-editor-row__context-info"> ({datasource.name})</em>}
-            {isDisabled && <em className="query-editor-row__context-info"> Disabled</em>}
+            {isDisabled && <em className="query-editor-row__context-info"> 禁用的</em>}
           </div>
           <div className="query-editor-row__collapsed-text" onClick={this.onToggleEditMode}>
             {isCollapsed && <div>{this.renderCollapsedText()}</div>}
@@ -243,14 +243,14 @@ export class QueryEditorRow extends PureComponent<Props, State> {
             <button className="query-editor-row__action" onClick={() => this.props.onMoveQuery(query, -1)}>
               <i className="fa fa-fw fa-arrow-up" />
             </button>
-            <button className="query-editor-row__action" onClick={this.onCopyQuery} title="Duplicate query">
+            <button className="query-editor-row__action" onClick={this.onCopyQuery} title="重复查询">
               <i className="fa fa-fw fa-copy" />
             </button>
-            <button className="query-editor-row__action" onClick={this.onDisableQuery} title="Disable/enable query">
+            <button className="query-editor-row__action" onClick={this.onDisableQuery} title="禁用/启用查询">
               {isDisabled && <i className="fa fa-fw fa-eye-slash" />}
               {!isDisabled && <i className="fa fa-fw fa-eye" />}
             </button>
-            <button className="query-editor-row__action" onClick={this.onRemoveQuery} title="Remove query">
+            <button className="query-editor-row__action" onClick={this.onRemoveQuery} title="删除查询">
               <i className="fa fa-fw fa-trash" />
             </button>
           </div>

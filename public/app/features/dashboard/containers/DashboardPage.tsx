@@ -182,13 +182,13 @@ export class DashboardPage extends PureComponent<Props, State> {
     try {
       this.props.dashboard.render();
     } catch (err) {
-      this.props.notifyApp(createErrorNotification(`Panel rendering error`, err));
+      this.props.notifyApp(createErrorNotification(`面板渲染错误`, err));
     }
   }
 
   handleFullscreenPanelNotFound(urlPanelId: string) {
     // Panel not found
-    this.props.notifyApp(createErrorNotification(`Panel with id ${urlPanelId} not found`));
+    this.props.notifyApp(createErrorNotification(`面板ID ${urlPanelId} 未找到`));
     // Clear url state
     this.props.updateLocation({
       query: {
@@ -220,7 +220,7 @@ export class DashboardPage extends PureComponent<Props, State> {
     dashboard.addPanel({
       type: 'add-panel',
       gridPos: { x: 0, y: 0, w: 12, h: 8 },
-      title: 'Panel Title',
+      title: '面板标题',
     });
 
     // scroll to top after adding panel

@@ -7,7 +7,7 @@ const template = `
   <div class="modal-header">
     <h2 class="modal-header-title">
       <i class="fa fa-save"></i>
-      <span class="p-l-1">Save changes</span>
+      <span class="p-l-1">保存更改</span>
     </h2>
 
     <a class="modal-header-close" ng-click="ctrl.dismiss();">
@@ -33,7 +33,7 @@ const template = `
             type="text"
             name="message"
             class="gf-form-input"
-            placeholder="Add a note to describe your changes &hellip;"
+            placeholder="添加注释以描述您的更改 &hellip;"
             give-focus="true"
             ng-model="ctrl.message"
             ng-model-options="{allowInvalid: true}"
@@ -59,9 +59,9 @@ const template = `
         ng-disabled="ctrl.saveForm.$invalid || ctrl.isSaving"
       >
         <span ng-if="!ctrl.isSaving">Save</span>
-        <span ng-if="ctrl.isSaving === true">Saving...</span>
+        <span ng-if="ctrl.isSaving === true">保存...</span>
       </button>
-      <button class="btn btn-inverse" ng-click="ctrl.dismiss();">Cancel</button>
+      <button class="btn btn-inverse" ng-click="ctrl.dismiss();">取消</button>
     </div>
   </form>
 </div>

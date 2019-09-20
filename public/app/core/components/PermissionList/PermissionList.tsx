@@ -41,7 +41,7 @@ class PermissionList extends PureComponent<Props> {
           {isFetching === true && items.length < 1 ? (
             <tr>
               <td colSpan={4}>
-                <em>Loading permissions...</em>
+                <em>加载权限...</em>
               </td>
             </tr>
           ) : null}
@@ -49,7 +49,7 @@ class PermissionList extends PureComponent<Props> {
           {isFetching === false && items.length < 1 ? (
             <tr>
               <td colSpan={4}>
-                <em>No permissions are set. Will only be accessible by admins.</em>
+                <em>没有设置权限。 只有管理员才能访问.</em>
               </td>
             </tr>
           ) : null}

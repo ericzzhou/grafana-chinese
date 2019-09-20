@@ -173,11 +173,11 @@ export class HistoryListCtrl {
 
   restore(version: number) {
     this.$rootScope.appEvent('confirm-modal', {
-      title: 'Restore version',
+      title: '还原版本',
       text: '',
-      text2: `Are you sure you want to restore the dashboard to version ${version}? All unsaved changes will be lost.`,
+      text2: `确实要将仪表板还原到${version}版本吗？所有未保存的更改都将丢失。`,
       icon: 'fa-history',
-      yesText: `Yes, restore to version ${version}`,
+      yesText: `是，还原到版本 ${version}`,
       onConfirm: this.restoreConfirm.bind(this, version),
     });
   }

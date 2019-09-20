@@ -20,7 +20,7 @@ export class ChangePasswordPage extends PureComponent<Props> {
         <UserProvider>
           {({ changePassword }, states) => (
             <Page.Contents>
-              <h3 className="page-sub-heading">Change Your Password</h3>
+              <h3 className="page-sub-heading">更改密码</h3>
               <ChangePasswordForm onChangePassword={changePassword} isSaving={states.changePassword} />
             </Page.Contents>
           )}

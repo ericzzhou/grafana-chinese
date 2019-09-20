@@ -188,7 +188,7 @@ export class ManageDashboardsCtrl {
     const data = this.getFoldersAndDashboardsToDelete();
     const folderCount = data.folderUids.length;
     const dashCount = data.dashboardUids.length;
-    let text = 'Do you want to delete the ';
+    let text = '你想要删除 ';
     let text2;
 
     if (folderCount > 0 && dashCount > 0) {
@@ -201,11 +201,11 @@ export class ManageDashboardsCtrl {
     }
 
     appEvents.emit('confirm-modal', {
-      title: 'Delete',
+      title: '删除',
       text: text,
       text2: text2,
       icon: 'fa-trash',
-      yesText: 'Delete',
+      yesText: '删除',
       onConfirm: () => {
         this.deleteFoldersAndDashboards(data.folderUids, data.dashboardUids);
       },
@@ -248,7 +248,7 @@ export class ManageDashboardsCtrl {
 
   initTagFilter() {
     return this.searchSrv.getDashboardTags().then((results: any) => {
-      this.tagFilterOptions = [{ term: 'Filter By Tag', disabled: true }].concat(results);
+      this.tagFilterOptions = [{ term: '按标签过滤', disabled: true }].concat(results);
       this.selectedTagFilter = this.tagFilterOptions[0];
     });
   }

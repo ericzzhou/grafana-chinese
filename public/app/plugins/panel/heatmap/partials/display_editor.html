@@ -1,8 +1,8 @@
 <div class="editor-row">
   <div class="section gf-form-group">
-    <h5 class="section-heading">Colors</h5>
+    <h5 class="section-heading">颜色</h5>
     <div class="gf-form">
-      <label class="gf-form-label width-9">Mode</label>
+      <label class="gf-form-label width-9">模型</label>
       <div class="gf-form-select-wrapper width-8">
         <select class="input-small gf-form-input" ng-model="ctrl.panel.color.mode" ng-options="s for s in ctrl.colorModes" ng-change="ctrl.render()"></select>
       </div>
@@ -10,26 +10,26 @@
 
     <div ng-show="ctrl.panel.color.mode === 'opacity'">
       <div class="gf-form">
-        <label class="gf-form-label width-9">Color</label>
+        <label class="gf-form-label width-9">颜色</label>
         <span class="gf-form-label">
           <color-picker color="ctrl.panel.color.cardColor" onChange="ctrl.onCardColorChange"></color-picker>
         </span>
       </div>
       <div class="gf-form">
-        <label class="gf-form-label width-9">Scale</label>
+        <label class="gf-form-label width-9">比例</label>
         <div class="gf-form-select-wrapper width-8">
           <select class="input-small gf-form-input" ng-model="ctrl.panel.color.colorScale" ng-options="s for s in ctrl.opacityScales" ng-change="ctrl.render()"></select>
         </div>
       </div>
       <div class="gf-form" ng-if="ctrl.panel.color.colorScale === 'sqrt'">
-        <label class="gf-form-label width-9">Exponent</label>
+        <label class="gf-form-label width-9">指数</label>
         <input type="number" class="gf-form-input width-8" placeholder="auto" data-placement="right" bs-tooltip="''" ng-model="ctrl.panel.color.exponent" ng-change="ctrl.refresh()" ng-model-onblur>
       </div>
     </div>
 
     <div ng-show="ctrl.panel.color.mode === 'spectrum'">
       <div class="gf-form">
-        <label class="gf-form-label width-9">Scheme</label>
+        <label class="gf-form-label width-9">方案</label>
         <div class="gf-form-select-wrapper width-8">
           <select class="input-small gf-form-input" ng-model="ctrl.panel.color.colorScheme" ng-options="s.value as s.name for s in ctrl.colorSchemes" ng-change="ctrl.render()"></select>
         </div>
@@ -42,19 +42,19 @@
   </div>
 
   <div class="section gf-form-group">
-    <h5 class="section-heading">Color scale</h5>
+    <h5 class="section-heading">色标</h5>
     <div class="gf-form">
-      <label class="gf-form-label width-8">Min</label>
+      <label class="gf-form-label width-8">最小</label>
       <input type="number" ng-model="ctrl.panel.color.min" class="gf-form-input width-5" placeholder="auto" data-placement="right" bs-tooltip="''" ng-change="ctrl.refresh()" ng-model-onblur>
     </div>
     <div class="gf-form">
-      <label class="gf-form-label width-8">Max</label>
+      <label class="gf-form-label width-8">最大</label>
       <input type="number" ng-model="ctrl.panel.color.max" class="gf-form-input width-5" placeholder="auto" data-placement="right" bs-tooltip="''" ng-change="ctrl.refresh()" ng-model-onblur>
     </div>
   </div>
 
   <div class="section gf-form-group">
-    <h5 class="section-heading">Legend</h5>
+    <h5 class="section-heading">图例</h5>
     <gf-form-switch class="gf-form" label-class="width-8"
       label="Show legend"
       checked="ctrl.panel.legend.show" on-change="ctrl.render()">
@@ -68,17 +68,17 @@
       checked="ctrl.panel.hideZeroBuckets" on-change="ctrl.render()">
     </gf-form-switch>
     <div class="gf-form">
-      <label class="gf-form-label width-8">Space</label>
+      <label class="gf-form-label width-8">间距</label>
       <input type="number" class="gf-form-input width-5" placeholder="auto" data-placement="right" bs-tooltip="''" ng-model="ctrl.panel.cards.cardPadding" ng-change="ctrl.refresh()" ng-model-onblur>
     </div>
     <div class="gf-form">
-      <label class="gf-form-label width-8">Round</label>
+      <label class="gf-form-label width-8">范围</label>
       <input type="number" class="gf-form-input width-5" placeholder="auto" data-placement="right" bs-tooltip="''" ng-model="ctrl.panel.cards.cardRound" ng-change="ctrl.refresh()" ng-model-onblur>
     </div>
   </div>
 
   <div class="section gf-form-group">
-    <h5 class="section-heading">Tooltip</h5>
+    <h5 class="section-heading">提示</h5>
     <gf-form-switch class="gf-form" label-class="width-8"
       label="Show tooltip"
       checked="ctrl.panel.tooltip.show" on-change="ctrl.render()">
@@ -89,7 +89,7 @@
         checked="ctrl.panel.tooltip.showHistogram" on-change="ctrl.render()">
       </gf-form-switch>
       <div class="gf-form">
-        <label class="gf-form-label width-8">Decimals</label>
+        <label class="gf-form-label width-8">小数点</label>
         <input type="number" class="gf-form-input width-5" placeholder="auto" data-placement="right"
           bs-tooltip="'Max decimal precision for tooltip.'"
           ng-model="ctrl.panel.tooltipDecimals" ng-change="ctrl.render()" ng-model-onblur>

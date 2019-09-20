@@ -69,11 +69,11 @@
   </div>
 
   <form ng-if="mode === 'edit' || mode === 'new'" name="ctrl.form">
-    <h5 class="section-heading">General</h5>
+    <h5 class="section-heading">一般</h5>
     <div class="gf-form-group">
       <div class="gf-form-inline">
         <div class="gf-form max-width-19">
-          <span class="gf-form-label width-6">Name</span>
+          <span class="gf-form-label width-6">名称</span>
           <input
             type="text"
             class="gf-form-input"
@@ -86,7 +86,7 @@
         </div>
         <div class="gf-form max-width-19">
           <span class="gf-form-label width-6">
-            Type
+            类型
             <info-popover mode="right-normal">
               {{ variableTypes[current.type].description }}
             </info-popover>
@@ -104,7 +104,7 @@
 
       <div class="gf-form" ng-show="ctrl.form.name.$error.pattern">
         <span class="gf-form-label gf-form-label--error"
-          >Template names cannot begin with '__', that's reserved for Grafana's global variables</span
+          >模板名称不能以'__'开头，这是为Grafana的全局变量保留的</span
         >
       </div>
 
@@ -127,10 +127,10 @@
     </div>
 
     <div ng-if="current.type === 'interval'" class="gf-form-group">
-      <h5 class="section-heading">Interval Options</h5>
+      <h5 class="section-heading">区间选项</h5>
 
       <div class="gf-form">
-        <span class="gf-form-label width-9">Values</span>
+        <span class="gf-form-label width-9">值</span>
         <input
           type="text"
           class="gf-form-input"
@@ -154,7 +154,7 @@
 
         <div class="gf-form">
           <span class="gf-form-label width-9" ng-show="current.auto">
-            Step count <tip>How many times should the current time range be divided to calculate the value</tip>
+            步数 <tip>应该将当前时间范围划分多少次以计算该值</tip>
           </span>
           <div class="gf-form-select-wrapper max-width-10" ng-show="current.auto">
             <select
@@ -167,7 +167,7 @@
         </div>
         <div class="gf-form">
           <span class="gf-form-label" ng-show="current.auto">
-            Min interval <tip>The calculated value will not go below this threshold</tip>
+            最小间隔 <tip>计算出的值不会低于此阈值</tip>
           </span>
           <input
             type="text"
@@ -182,9 +182,9 @@
     </div>
 
     <div ng-if="current.type === 'custom'" class="gf-form-group">
-      <h5 class="section-heading">Custom Options</h5>
+      <h5 class="section-heading">自定义选项</h5>
       <div class="gf-form">
-        <span class="gf-form-label width-14">Values separated by comma</span>
+        <span class="gf-form-label width-14">值以逗号分隔</span>
         <input
           type="text"
           class="gf-form-input"
@@ -197,9 +197,9 @@
     </div>
 
     <div ng-if="current.type === 'constant'" class="gf-form-group">
-      <h5 class="section-heading">Constant options</h5>
+      <h5 class="section-heading">不变的选择</h5>
       <div class="gf-form">
-        <span class="gf-form-label">Value</span>
+        <span class="gf-form-label">值</span>
         <input
           type="text"
           class="gf-form-input"
@@ -211,9 +211,9 @@
     </div>
 
     <div ng-if="current.type === 'textbox'" class="gf-form-group">
-      <h5 class="section-heading">Text options</h5>
+      <h5 class="section-heading">文字选项</h5>
       <div class="gf-form">
-        <span class="gf-form-label">Default value</span>
+        <span class="gf-form-label">默认值</span>
         <input
           type="text"
           class="gf-form-input"
@@ -225,11 +225,11 @@
     </div>
 
     <div ng-if="current.type === 'query'" class="gf-form-group">
-      <h5 class="section-heading">Query Options</h5>
+      <h5 class="section-heading">查询选项</h5>
 
       <div class="gf-form-inline">
         <div class="gf-form max-width-21">
-          <span class="gf-form-label width-10">Data source</span>
+          <span class="gf-form-label width-10">数据源</span>
           <div class="gf-form-select-wrapper max-width-14">
             <select
               class="gf-form-input"
@@ -245,9 +245,9 @@
 
         <div class="gf-form max-width-22">
           <span class="gf-form-label width-10">
-            Refresh
+            刷新
             <info-popover mode="right-normal">
-              When to update the values of this variable.
+              何时更新此变量的值。
             </info-popover>
           </span>
           <div class="gf-form-select-wrapper width-15">

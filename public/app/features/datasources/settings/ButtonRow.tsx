@@ -17,21 +17,21 @@ const ButtonRow: FC<Props> = ({ isReadOnly, onDelete, onSubmit, onTest }) => {
           className="btn btn-primary"
           disabled={isReadOnly}
           onClick={event => onSubmit(event)}
-          aria-label="Save and Test button"
+          aria-label="保存和测试按钮"
         >
-          Save &amp; Test
+          保存 &amp; 测试
         </button>
       )}
       {isReadOnly && (
         <button type="submit" className="btn btn-success" onClick={onTest}>
-          Test
+          测试
         </button>
       )}
       <button type="submit" className="btn btn-danger" disabled={isReadOnly} onClick={onDelete}>
-        Delete
+        删除
       </button>
       <a className="btn btn-inverse" href={`${config.appSubUrl}/datasources`}>
-        Back
+        返回
       </a>
     </div>
   );

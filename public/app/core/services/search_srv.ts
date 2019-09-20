@@ -28,7 +28,7 @@ export class SearchSrv {
     return this.queryForRecentDashboards().then((result: any[]) => {
       if (result.length > 0) {
         sections['recent'] = {
-          title: 'Recent',
+          title: '最近',
           icon: 'fa fa-clock-o',
           score: -1,
           removable: true,
@@ -83,7 +83,7 @@ export class SearchSrv {
     return this.backendSrv.search({ starred: true, limit: 30 }).then(result => {
       if (result.length > 0) {
         sections['starred'] = {
-          title: 'Starred',
+          title: '主要的',
           icon: 'fa fa-star-o',
           score: -2,
           expanded: this.starredIsOpen,
@@ -171,7 +171,7 @@ export class SearchSrv {
         } else {
           section = {
             id: 0,
-            title: 'General',
+            title: '常规',
             items: [],
             icon: 'fa fa-folder-open',
             toggle: this.toggleFolder.bind(this),

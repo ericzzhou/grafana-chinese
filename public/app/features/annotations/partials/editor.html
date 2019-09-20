@@ -1,9 +1,9 @@
 <div ng-controller="AnnotationsEditorCtrl">
   <div class="page-action-bar">
     <h3 class="dashboard-settings__header">
-      <a ng-click="ctrl.backToList()">Annotations</a>
-      <span ng-show="ctrl.mode === 'new'">&gt; New</span>
-      <span ng-show="ctrl.mode === 'edit'">&gt; Edit</span>
+      <a ng-click="ctrl.backToList()">备注</a>
+      <span ng-show="ctrl.mode === 'new'">&gt; 添加</span>
+      <span ng-show="ctrl.mode === 'edit'">&gt; 编辑</span>
     </h3>
 
     <div class="page-action-bar__spacer"></div>
@@ -15,7 +15,7 @@
       ng-if="ctrl.annotations.length > 1"
       ng-hide="ctrl.mode === 'edit' || ctrl.mode === 'new'"
     >
-      New
+      添加
     </a>
   </div>
 
@@ -23,8 +23,8 @@
     <table class="filter-table filter-table--hover">
       <thead>
         <tr>
-          <th>Query name</th>
-          <th>Data source</th>
+          <th>查询名称</th>
+          <th>数据源</th>
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -36,7 +36,7 @@
           </td>
           <td style="width:90%" ng-show="annotation.builtIn" class="pointer" ng-click="ctrl.edit(annotation)">
             <i class="gicon gicon-annotation"></i> &nbsp;
-            <em class="muted">{{ annotation.name }} (Built-in)</em>
+            <em class="muted">{{ annotation.name }} (内置)</em>
           </td>
           <td class="pointer" ng-click="ctrl.edit(annotation)">
             {{ annotation.datasource || 'Default' }}
@@ -68,14 +68,14 @@
 
   <div class="annotations-basic-settings" ng-if="ctrl.mode === 'edit' || ctrl.mode === 'new'">
     <div class="gf-form-group">
-      <h5 class="section-heading">General</h5>
+      <h5 class="section-heading">常规</h5>
       <div class="gf-form-inline">
         <div class="gf-form">
-          <span class="gf-form-label width-7">Name</span>
+          <span class="gf-form-label width-7">名字</span>
           <input type="text" class="gf-form-input width-20" ng-model="ctrl.currentAnnotation.name" placeholder="name" />
         </div>
         <div class="gf-form">
-          <span class="gf-form-label width-7">Data source</span>
+          <span class="gf-form-label width-7">数据源</span>
           <div class="gf-form-select-wrapper">
             <select
               class="gf-form-input"
@@ -101,7 +101,7 @@
         >
         </gf-form-switch>
         <div class="gf-form">
-          <label class="gf-form-label width-9">Color</label>
+          <label class="gf-form-label width-9">颜色</label>
           <span class="gf-form-label">
             <color-picker color="ctrl.currentAnnotation.iconColor" onChange="ctrl.onColorChange"></color-picker>
           </span>
@@ -109,7 +109,7 @@
       </div>
     </div>
 
-    <h5 class="section-heading">Query</h5>
+    <h5 class="section-heading">查询</h5>
     <rebuild-on-change property="ctrl.currentDatasource">
       <plugin-component type="annotations-query-ctrl"> </plugin-component>
     </rebuild-on-change>
@@ -122,10 +122,10 @@
           class="btn gf-form-button btn-primary"
           ng-click="ctrl.add()"
         >
-          Add
+          添加
         </button>
         <button ng-show="ctrl.mode === 'edit'" type="button" class="btn btn-primary pull-left" ng-click="ctrl.update()">
-          Update
+          更新
         </button>
       </div>
     </div>
