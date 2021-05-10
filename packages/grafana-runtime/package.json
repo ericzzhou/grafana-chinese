@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@types/systemjs": "^0.20.6",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "pretty-format": "24.9.0",
     "rollup": "1.6.0",
     "rollup-plugin-commonjs": "9.2.1",
