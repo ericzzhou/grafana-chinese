@@ -10,20 +10,17 @@ Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
 <!---
 ![](http://docs.grafana.org/assets/img/features/dashboard_ex1.png)
 -->
-## 汉化说明
+## ⚠️ 项目已归档（Archived）
 
-本仓库是 Grafana 官方代码仓库的完全克隆版，在官方基础上进行汉化。包括 `前端部分汉化` 和 `后端Go 部分汉化`。
+> **本项目不再维护。** Grafana 从 v9.3（2022年底）开始已内置官方 i18n 框架，并通过 [Crowdin](https://crowdin.com/project/grafana) 提供简体中文翻译。
+>
+> **如需中文版 Grafana，请直接使用官方最新版本**：安装后在 设置 → 语言 中选择「简体中文」即可。
+>
+> 本仓库基于 Grafana v6.x，仅作为历史参考保留，不建议用于生产环境。
 
-我们尽量保证功能完整性，如果您在使用过程中发现问题，请及时联系我们。
+## 原汉化说明（历史）
 
-如果你是开发人员，想参与到Grafana的汉化工作，请联系我。
-
-本仓库基于 Windows 10 编译并开展汉化工作
-
-## 后续计划
-    - 修改 React,Angular ,Go 添加多语言机制，多语言资源文件。
-    - 提供汉化版部署包
-    - 提供汉化版Docker包
+本仓库是 Grafana v6.x 官方代码仓库的克隆版，在官方基础上进行了前端和后端 Go 部分的汉化。
 
 ## 安装
 
